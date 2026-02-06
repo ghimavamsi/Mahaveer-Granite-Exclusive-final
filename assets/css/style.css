@@ -136,7 +136,7 @@ p {
     padding: 0 31px 0 0;
 }
 .int_header_wrapper .int_logo {
-    padding-top: 15px;
+    
 	margin-left: 25px;
 }
 .int_nav {
@@ -7685,6 +7685,7 @@ ul.comment_left {
 }
 .int_header_wrapper .int_logo, .int_header_style2 .int_logo, .int_header_style3 .int_logo, .int_header_style4 .int_logo  {
     margin-left: 0;
+    width: 88%;
 }
 .int_nav .int_menu > ul > li, .int_cartsec > ul > li {
 	    padding: 30px 18px 30px;
@@ -7775,7 +7776,7 @@ ul.comment_left {
     top: 110px;
 }
 .int_nav .int_menu > ul > li, .int_cartsec > ul > li {
-	padding: 45px 5px 45px;
+	/* padding: 45px 5px 45px; */
 }
 .int_project_gallery .grid-item:hover .top_content {
     top: 15px;
@@ -9398,7 +9399,7 @@ li.int_home_dropdown:before {
 	padding-left: 15px;
 }
 .int_header_wrapper .int_logo {
-    margin-left: -15px;
+    margin-left: 10px;
 }
 .int_header_wrapper.int_header_style1 {
     padding: 0 0 30px 0;
@@ -9426,7 +9427,7 @@ li.int_home_dropdown:before {
     margin-left: 5px;
 }
 .int_nav .int_cartsec > ul > li {
-    padding: 0px 5px;
+    padding: 0px 20px;
 }
 .int_header_wrapper.int_header_style2 {
     padding: 0 0 30px 0;
@@ -10073,7 +10074,7 @@ li.int_login_sign a {
 
 /* mobile header logo size */
 @media (max-width: 575px) {
-	.int_logo {
+.int_header_wrapper	.int_logo {
 		display: flex;
         justify-content: center !important;
 	}
