@@ -12743,7 +12743,7 @@ ul.comment_left {
 
 
 /* ============ Product listing Page ============== */
-@media (max-width: 1024px) and (min-width: 768px) {
+/* @media (max-width: 1024px) and (min-width: 768px) {
     .int_product_style4 .product_item {
         width: 200px;
         height: 300px;
@@ -12755,7 +12755,7 @@ ul.comment_left {
         width: 250px;
         height: 300px;
     }
-}
+} */
 
 
 /* ===============================
