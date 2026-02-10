@@ -5190,6 +5190,7 @@ fieldset:disabled .btn {
 .pagination {
     display: flex;
     padding-left: 0;
+    justify-content: center;
     list-style: none
 }
 
