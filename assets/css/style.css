@@ -1,6 +1,6 @@
 /*--------------------- Copyright (c) 2019 ----------------------- 
 [Master Stylesheet] 
-Project: Inland Design
+Project: Mahaveer Granite
 Version: 1.0.0 
 Author: Kamleshyadav
  ------------------------------------------------------------------- 
@@ -4251,7 +4251,7 @@ span.close_menu_int {
     position: relative;
 }
 
-.product_grid {
+.product_grid.style-2 {
     padding: 15px;
     background-color: var(--bg-card);
     margin-bottom: 40px;

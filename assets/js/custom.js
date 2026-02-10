@@ -1,6 +1,6 @@
 /*--------------------- Copyright (c) 2019 -----------------------
 [Master Javascript]
-Project: Inland Design - Multipurpose Responsive HTML Template
+Project: Mahaveer Granite - Multipurpose Responsive HTML Template
 Version: 1.0.0
 Assigned to: Theme Forest
 -------------------------------------------------------------------*/
@@ -18,7 +18,7 @@ Assigned to: Theme Forest
         return;
       }
 
-      /*-------------- Inland Design Functions Calling ---------------------------------------------------
+      /*-------------- Mahaveer Granite Functions Calling ---------------------------------------------------
 		------------------------------------------------------------------------------------------------*/
 
       this.Open_cartbox();
@@ -53,7 +53,7 @@ Assigned to: Theme Forest
       this.Mouse_wheel();
     },
 
-    /*-------------- Inland Design Functions Calling ---------------------------------------------------
+    /*-------------- Mahaveer Granite Functions Calling ---------------------------------------------------
 		---------------------------------------------------------------------------------------------------*/
 
     // start cartbox open toggle
