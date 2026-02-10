@@ -947,3 +947,156 @@ jQuery(".filter-clear").on("click", function () {
 });
 
 
+
+// ================= PRODUCT DETAILS PAGE JS =================
+// ---------- MAIN IMAGE ZOOM ----------
+const zoomContainer = document.querySelector(".image-zoom-container");
+const mainImg = document.getElementById("mainImage");
+
+if (zoomContainer && mainImg) {
+  zoomContainer.addEventListener("mousemove", (e) => {
+    const rect = zoomContainer.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    mainImg.style.transformOrigin = `${x}% ${y}%`;
+  });
+
+  zoomContainer.addEventListener("mouseleave", () => {
+    mainImg.style.transformOrigin = "center";
+  });
+}
+
+// ---------- TRUE INFINITE THUMB SLIDER ----------
+const track = document.querySelector(".thumb-track");
+const prevBtn = document.querySelector(".thumb-nav.prev");
+const nextBtn = document.querySelector(".thumb-nav.next");
+
+const thumbWidth = 90; // 80 + gap
+const visible = 4;
+let autoTimer;
+
+if (track) {
+  let thumbs = Array.from(track.children);
+  const total = thumbs.length;
+
+  // 🔁 CLONE FIRST & LAST SET
+  for (let i = 0; i < visible; i++) {
+    track.appendChild(thumbs[i].cloneNode(true));
+    track.insertBefore(thumbs[total - 1 - i].cloneNode(true), track.firstChild);
+  }
+
+  thumbs = Array.from(track.children);
+  let index = visible;
+
+  track.style.transform = `translateX(-${index * thumbWidth}px)`;
+
+  function moveSlider() {
+    track.style.transition = "transform 0.4s ease";
+    track.style.transform = `translateX(-${index * thumbWidth}px)`;
+  }
+
+  function nextSlide() {
+    index++;
+    moveSlider();
+
+    if (index === total + visible) {
+      setTimeout(() => {
+        track.style.transition = "none";
+        index = visible;
+        track.style.transform = `translateX(-${index * thumbWidth}px)`;
+      }, 400);
+    }
+  }
+
+  function prevSlide() {
+    index--;
+    moveSlider();
+
+    if (index === visible - 1) {
+      setTimeout(() => {
+        track.style.transition = "none";
+        index = total + visible - 1;
+        track.style.transform = `translateX(-${index * thumbWidth}px)`;
+      }, 400);
+    }
+  }
+
+  // Auto slide
+  function startAuto() {
+    autoTimer = setInterval(nextSlide, 2500);
+  }
+
+  function stopAuto() {
+    clearInterval(autoTimer);
+  }
+
+  startAuto();
+
+  track.addEventListener("mouseenter", stopAuto);
+  track.addEventListener("mouseleave", startAuto);
+
+  if (nextBtn) nextBtn.addEventListener("click", nextSlide);
+  if (prevBtn) prevBtn.addEventListener("click", prevSlide);
+
+  // Thumbnail click sync (only originals)
+  track.addEventListener("click", (e) => {
+    const thumb = e.target.closest(".thumb");
+    if (!thumb || !thumb.dataset.img) return;
+
+    document.querySelector(".thumb.active")?.classList.remove("active");
+    thumb.classList.add("active");
+    changeMainImage(thumb.dataset.img);
+    // document.getElementById("mainImage").src = thumb.dataset.img;
+  });
+}
+
+// ---------- ACCORDION ----------
+document.querySelectorAll(".acc-header").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const item = btn.parentElement;
+    const icon = btn.querySelector(".icon");
+
+    item.classList.toggle("active");
+    if (icon) {
+      icon.textContent = item.classList.contains("active") ? "−" : "+";
+    }
+  });
+});
+
+function changeMainImage(src) {
+  mainImg.style.opacity = "0";
+  setTimeout(() => {
+    mainImg.src = src;
+    mainImg.style.opacity = "1";
+  }, 150);
+}
+
+
+// mobile zoom
+const zoomModal = document.getElementById("zoomModal");
+const zoomModalImg = document.getElementById("zoomModalImg");
+const zoomClose = document.querySelector(".zoom-close");
+
+/* Open modal on tap (mobile only) */
+mainImg.addEventListener("click", () => {
+  if (window.innerWidth <= 768) {
+    zoomModalImg.src = mainImg.src;
+    zoomModal.classList.add("active");
+  }
+});
+
+/* Close modal */
+zoomClose.addEventListener("click", () => {
+  zoomModal.classList.remove("active");
+});
+
+/* Close on background tap */
+zoomModal.addEventListener("click", (e) => {
+  if (e.target === zoomModal) {
+    zoomModal.classList.remove("active");
+  }
+});
+
+
+
+// sticky specs right column
