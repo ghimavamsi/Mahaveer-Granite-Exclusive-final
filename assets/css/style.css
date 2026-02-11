@@ -12912,6 +12912,10 @@ ul.comment_left {
 /* ==============================details page css main===================================== */
 /* ================= PRODUCT DETAILS SECTION ================= */
 
+.details_main{
+    background-color: var(--bg-page) !important;
+}
+
 .product-main {
   background: #fafafa;
   padding: 60px 20px;
@@ -13044,10 +13048,10 @@ ul.comment_left {
 }
 
 .product-right h2 {
-  margin-top: 30px;
+  margin-top: 5px;
   font-size: 28px;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   letter-spacing: 0.5px;
 }
 
@@ -13330,14 +13334,14 @@ ul.comment_left {
 .spec-row.highlight {
   /* background: #fafafa; */
   border-radius: 10px;
-  padding: 14px 12px;
+  /* padding: 14px 12px; */
   margin: 6px 0;
 }
 
-.spec-row.highlight .spec-label {
+/* .spec-row.highlight .spec-label {
   font-weight: 600;
   color: #000;
-}
+} */
 
 .spec-row.highlight .spec-value {
   font-weight: 700;
@@ -13349,7 +13353,7 @@ ul.comment_left {
   background: var(--bg-section-alt);
   border: 1px solid #e6e6e6;
   border-radius: 14px;
-  padding: 22px;
+  padding: 0px 22px 0px 22px;
   margin-bottom: 26px;
 }
 
@@ -13391,19 +13395,19 @@ ul.comment_left {
 /* Highlight important specs */
 .spec-row.highlight {
   /* background: #fafafa; */
-  border-radius: 10px;
-  padding: 14px 12px;
-  margin: 6px 0;
+  /* border-radius: 10px;
+  padding: 14px 0px;
+  margin: 6px 0; */
 }
 
-.spec-row.highlight .spec-label {
+/* .spec-row.highlight .spec-label {
   color: #000;
   font-weight: 600;
 }
 
 .spec-row.highlight .spec-value {
   font-weight: 700;
-}
+} */
 
 /* ================= CTA ================= */
 
@@ -13480,7 +13484,8 @@ ul.comment_left {
 
 .product-main {
   background: var(--bg-page);
-  padding: 35px 25px;
+  padding-top: 60px;
+  padding-bottom: 0px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
@@ -13507,7 +13512,8 @@ ul.comment_left {
 
 .product-details-flow {
   background: var(--bg-page);
-  padding: 50px 20px 60px;
+  padding: 50px 0px 60px 0px;
+  
 }
 
 /* Grid for accordions */
