@@ -13581,3 +13581,14 @@ ul.comment_left {
     gap: 20px;
   }
 }
+
+.social_share{
+    margin-top: 12px !important;
+}
+.social_share i{
+    font-size: 15px;
+}
+.social_share ul{
+    justify-content: center;
+    gap: 25px;
+}
