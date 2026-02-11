@@ -364,7 +364,7 @@ Assigned to: Theme Forest
     BannerSlider_style2: function () {
       if ($(".int_slider_banner_style2 .swiper-container").length > 0) {
         var swiper = new Swiper(".int_slider_banner_style2 .swiper-container", {
-          speed: 1000,
+          speed: 3000,
           loop: true,
           slidesPerView: 1,
           navigation: {
@@ -609,9 +609,9 @@ Assigned to: Theme Forest
     index4_banner_slider: function () {
       var swiper = new Swiper(".int_index4_slider_style4 .swiper-container", {
         loop: true,
-        speed: 1000,
+        speed: 3000,
         slidesPerView: 1,
-        autoplay: true,
+        autoplay: false,
         effect: "fade",
         fadeEffect: { crossFade: true },
         pagination: {
