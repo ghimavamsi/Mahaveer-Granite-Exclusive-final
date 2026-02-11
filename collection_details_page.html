@@ -288,7 +288,7 @@
                             </div>
 
                             <!-- CTA BUTTONS -->
-                            <div class="product-cta">
+                            <!-- <div class="product-cta">
                                 <div class="footer_social social_share">
                                     <ul>
                                         <li>
@@ -313,8 +313,42 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <!-- <a href="#" class="btn-outline">Contact Us</a> -->
                                 <a href="#" class="btn-solid">Contact Us</a>
+                            </div> -->
+
+                            <div class="mg-product-actions">
+
+                                <!-- Main CTA Row -->
+                                <div class="mg-action-row">
+                                    <a href="#" class="mg-btn mg-btn-outline">
+                                        <i class="far fa-heart"></i>
+                                        Add to Wishlist
+                                    </a>
+
+                                    <a href="javascript:;" class="mg-btn mg-btn-primary"  id="mgOpenEnquiry">
+                                        <i class="fas fa-paper-plane"></i>
+                                        Enquire Now
+                                    </a>
+                                </div>
+
+                                <!-- Social Share Row -->
+                                <div class="mg-share-row">
+                                    <a href="#" class="mg-share-btn">
+                                        <i class="fab fa-facebook-f"></i>
+                                        Share
+                                    </a>
+
+                                    <a href="#" class="mg-share-btn">
+                                        <i class="fab fa-instagram"></i>
+                                        Instagram
+                                    </a>
+
+                                    <a href="#" class="mg-share-btn">
+                                        <i class="fab fa-whatsapp"></i>
+                                        Share
+                                    </a>
+                                </div>
+
                             </div>
 
 
@@ -735,7 +769,6 @@
         </div>
         <!--===End Footer Section===-->
 
-
         <!--===Start Bottom Footer Section===-->
         <div class="int_bottom_footer_wrapper">
             <div class="container">
@@ -751,8 +784,49 @@
         </div>
         <!--===Start Bottom Footer Section===-->
 
+        <!-- ENQUIRY MODAL -->
+        <div class="mg-enquiry-overlay" id="mgEnquiryOverlay"></div>
+        <div class="mg-enquiry-modal" id="mgEnquiryModal">
+            <div class="mg-enquiry-box">
+
+                <div class="mg-enquiry-header">
+                    <h3>Product Enquiry</h3>
+                    <button class="mg-close-modal" id="mgCloseEnquiry">&times;</button>
+                </div>
+
+                <form id="mgEnquiryForm">
+
+                    <div class="mg-form-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+
+                    <div class="mg-form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+
+                    <div class="mg-form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+
+                    <div class="mg-form-group">
+                        <textarea rows="4" placeholder="Your Message"></textarea>
+                    </div>
+
+                    <div class="mg-form-actions">
+                        <button type="submit" class="mg-btn-primary">Send Enquiry</button>
+                        <button type="button" class="mg-btn-cancel" id="mgCancelEnquiry">Cancel</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+        <!-- ENQUIRY MODAL END-->
+
+
     </div>
     <!--=== End Main wraapper ===-->
+
 
 
 
