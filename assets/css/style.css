@@ -4991,8 +4991,10 @@ span.close_menu_int {
 
 .int_banner_slider4 h1 {
     color: var(--text-secondary);
-    font-size: 72px;
+    font-size: 52px;
     font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 62px;
 }
 
 .int_banner_slider4 h2 {

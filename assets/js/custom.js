@@ -609,9 +609,9 @@ Assigned to: Theme Forest
     index4_banner_slider: function () {
       var swiper = new Swiper(".int_index4_slider_style4 .swiper-container", {
         loop: true,
-        speed: 3000,
+        speed: 2000,
         slidesPerView: 1,
-        autoplay: false,
+        autoplay: true,
         effect: "fade",
         fadeEffect: { crossFade: true },
         pagination: {
