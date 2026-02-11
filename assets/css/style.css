@@ -90,7 +90,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family:  "Playfair", serif;
+    font-family: "Playfair", serif;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -1428,7 +1428,7 @@ li.int_login_sign p:hover {
 
 .index4_btn,
 .index4_btn:focus {
-    padding: 5px 10px 5px 10px;
+    padding: 0px 10px 0px 10px;
     margin-top: 30px;
     line-height: 50px;
     outline: none;
@@ -1694,7 +1694,7 @@ li.int_login_sign p:hover {
  *******************************************************/
 .int_about_wrapper {
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 120px;
 }
 
 .about_box_wrapper .about_imgbox {
@@ -6055,7 +6055,7 @@ span.close_menu_int {
 }
 
 .int_blog_pagination a.page-link {
-    color: var(--bg-page);
+    color: var(--btn-primary);
     width: 50px;
     height: 50px;
     line-height: 50px;
@@ -6063,7 +6063,7 @@ span.close_menu_int {
     padding: 0;
     margin: 0;
     text-align: center;
-    border: 1px solid #efefef;
+    border: 1px solid var(--btn-primary);
     box-shadow: none;
 }
 
@@ -6117,9 +6117,9 @@ span.close_menu_int {
 }
 
 /* Index v2 Blog Sidebar css */
-.int_sidebar_box {
+/* .int_sidebar_box {
     margin-bottom: 46px;
-}
+} */
 
 .int_sidebar_box.recent_blog_one {
     margin-bottom: 38px;
@@ -6950,7 +6950,7 @@ ul.comment_left {
 /* Product css */
 .int_product_listbar.int_product_style4 {
     text-align: center;
-    padding-bottom: 25px;
+    /* padding-bottom: 25px; */
 }
 
 .int_product_listbar>ul>li {
@@ -7120,6 +7120,7 @@ ul.comment_left {
 
 .int_blog_sidebar.int_product_sidebar {
     margin-top: 15px;
+    border: 1px solid var(--btn-primary);
 }
 
 .int_product_dark .price_range p {
@@ -11448,10 +11449,10 @@ ul.comment_left {
         margin-left: 0;
     }
 
-    .int_blog_sidebar.int_product_sidebar {
+    /* .int_blog_sidebar.int_product_sidebar {
         margin-top: 46px;
         margin-bottom: 46px;
-    }
+    } */
 
     .int_product_section.int_product_style4 {
         padding: 47px 0 0;
@@ -12073,6 +12074,7 @@ ul.comment_left {
     .int_product_white .int_blog_pagination {
         margin: auto;
         display: table;
+        padding-bottom: 30px;
     }
 
     .int_project_gallery .grid_img {
@@ -12517,6 +12519,7 @@ ul.comment_left {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    border: 5px solid var(--bg-card);
     object-fit: cover;
     background: #EFE6D8;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
@@ -12784,10 +12787,10 @@ ul.comment_left {
 
 /* ---------- BASE ---------- */
 .int_sidebar_box {
-    background: var(--bg-page);
+    /* background: var(--bg-page); */
     border: 1px solid rgba(0, 0, 0, 0.06);
-    padding: 14px;
-    margin-bottom: 14px;
+    padding: 25px;
+    /* margin-bottom: 14px; */
     transition: all 0.25s ease;
 }
 
@@ -12798,7 +12801,7 @@ ul.comment_left {
 
 /* active */
 .int_sidebar_box.active {
-    background: #f5f5f5;
+    /* background: #f5f5f5; */
     border-color: rgba(0, 0, 0, 0.12);
 }
 
@@ -12909,7 +12912,7 @@ ul.comment_left {
 
 /* ---------- CLEAR BUTTON ---------- */
 .filter-clear-wrap {
-    margin-top: 15px;
+    margin: 15px 5px 5px 0px;
     text-align: right;
 }
 
@@ -13707,6 +13710,7 @@ ul.comment_left {
 .mg-btn-outline {
     flex: 0 0 auto;
 }
+
 /* ===============================
    RESPONSIVE
 =================================*/
@@ -13729,7 +13733,7 @@ ul.comment_left {
 .mg-enquiry-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(30,30,30,0.6);
+    background: rgba(30, 30, 30, 0.6);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
@@ -13762,7 +13766,7 @@ ul.comment_left {
     max-width: 520px;
     padding: 35px;
     border-radius: 8px;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
     transform: translateY(30px);
     transition: all 0.3s ease;
 }
@@ -13812,7 +13816,7 @@ ul.comment_left {
 .mg-form-group textarea:focus {
     border-color: var(--btn-primary);
     outline: none;
-    box-shadow: 0 0 0 2px rgba(122,92,72,0.1);
+    box-shadow: 0 0 0 2px rgba(122, 92, 72, 0.1);
 }
 
 /* BUTTONS */
@@ -13868,4 +13872,195 @@ ul.comment_left {
         width: 100%;
         text-align: center;
     }
+}
+
+
+/* filter button */
+/* ============================= */
+/* Mobile Filter Button */
+/* ============================= */
+
+.mobile-filter-btn {
+    display: none;
+    /* hidden by default */
+    align-items: center;
+    gap: 8px;
+    padding: 2px 10px;
+    background: var(--btn-primary);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mobile-filter-btn:hover {
+    background: var(--btn-primary-hover);
+}
+
+/* Show ONLY on mobile */
+@media (max-width: 767px) {
+    .mobile-filter-btn {
+        display: inline-flex;
+    }
+}
+
+/* Default hide */
+.filter-mobile-header {
+    display: none;
+}
+
+/* Show only on mobile */
+@media (max-width: 767px) {
+    .filter-mobile-header {
+        display: flex;
+        /* or block depending on layout */
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+
+
+/* =============================== */
+/* MOBILE FILTER DRAWER */
+/* =============================== */
+
+
+@media (max-width: 767px) {
+
+    .filter-drawer {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 85%;
+        max-width: 380px;
+        height: 100vh;
+        background: var(--bg-page);
+        z-index: 9999;
+        overflow-y: auto;
+        overflow-x: hidden;
+        transition: 0.35s ease;
+        padding: 20px 18px 90px;
+        box-shadow: 5px 0 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .filter-drawer.active {
+        left: 0;
+    }
+
+    .filter-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        z-index: 9998;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease;
+    }
+
+    .filter-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    body.filter-open {
+        overflow: hidden;
+    }
+
+    /* Header */
+    .filter-mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 18px;
+    }
+
+    .filter-mobile-header h4 {
+        font-size: 18px;
+        color: var(--text-dark);
+        margin: 0;
+    }
+
+    .filter-close-btn {
+        background: none;
+        border: none;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    /* Footer */
+    .filter-mobile-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 85%;
+        max-width: 380px;
+        background: var(--bg-card);
+        padding: 14px;
+        display: flex;
+        gap: 10px;
+        border-top: 1px solid #ddd;
+    }
+
+    .filter-cancel-btn {
+        flex: 1;
+        background: transparent;
+        border: 1px solid var(--btn-primary);
+        color: var(--btn-primary);
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .filter-apply-btn {
+        flex: 1;
+        background: var(--btn-primary);
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .filter-apply-btn:hover {
+        background: var(--btn-primary-hover);
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* Make sure drawer scrolls */
+    #mobileFilterDrawer {
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 100vh;
+    }
+
+    /* Firefox */
+    #mobileFilterDrawer {
+        scrollbar-width: thin;
+        scrollbar-color: var(--btn-primary) transparent;
+    }
+
+    /* Chrome / Edge / Safari */
+    #mobileFilterDrawer::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    #mobileFilterDrawer::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    #mobileFilterDrawer::-webkit-scrollbar-thumb {
+        background: var(--btn-primary);
+        border-radius: 10px;
+    }
+
+    #mobileFilterDrawer::-webkit-scrollbar-thumb:hover {
+        background: var(--btn-primary-hover);
+    }
+
 }

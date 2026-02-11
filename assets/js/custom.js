@@ -1160,3 +1160,28 @@ jQuery(document).ready(function () {
     }
   });
 });
+
+// =======MOBILE SIDEBAR FILTER==========
+const filterBtn = document.querySelector(".mobile-filter-btn");
+const drawer = document.getElementById("mobileFilterDrawer");
+const overlay = document.getElementById("filterOverlay");
+const closeBtn = document.getElementById("filterClose");
+const cancelBtn = document.getElementById("filterCancel");
+
+if (filterBtn) {
+  filterBtn.addEventListener("click", () => {
+    drawer.classList.add("active");
+    overlay.classList.add("active");
+    document.body.classList.add("filter-open");
+  });
+}
+
+function closeFilter() {
+  drawer.classList.remove("active");
+  overlay.classList.remove("active");
+  document.body.classList.remove("filter-open");
+}
+
+if (closeBtn) closeBtn.addEventListener("click", closeFilter);
+if (cancelBtn) cancelBtn.addEventListener("click", closeFilter);
+if (overlay) overlay.addEventListener("click", closeFilter);

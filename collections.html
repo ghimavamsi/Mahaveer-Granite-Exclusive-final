@@ -20,7 +20,7 @@ Purchase:
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<meta name="description" content="">
 	<meta name="keywords" content="">
-	
+
 	<meta name="MobileOptimized" content="320">
 
 	<!--=== custom css ===-->
@@ -336,8 +336,16 @@ Purchase:
 		<div class="int_blog_category int_product_white">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-3 col-md-4 col-sm-12">
+					<div class="col-lg-3 col-md-4 col-sm-12 filter-drawer" id="mobileFilterDrawer">
+
 						<div class="int_blog_sidebar int_product_sidebar">
+
+							<!-- sidebar -->
+							<div class="filter-mobile-header">
+								<h4>Filter By :</h4>
+								<button class="filter-close-btn" id="filterClose">✕</button>
+							</div>
+
 
 							<!-- FILTER PRICE (OPEN BY DEFAULT OPTIONAL) -->
 							<div class="int_sidebar_box active">
@@ -382,7 +390,7 @@ Purchase:
 								<h4 class="filter-toggle">
 									Color <span class="acc-icon">+</span>
 								</h4>
-								
+
 								<div class="filter-content filter-colors">
 									<span class="color-dot" data-color="black" style="background:#000"></span>
 									<span class="color-dot" data-color="grey" style="background:#999"></span>
@@ -392,7 +400,7 @@ Purchase:
 
 							</div>
 
-							<div class="int_blog_sidebar int_product_sidebar">
+							<div class="int_product_sidebar">
 
 								<!-- COLLECTION -->
 								<div class="int_sidebar_box">
@@ -493,6 +501,13 @@ Purchase:
 								<button type="button" class="filter-clear">Clear All</button>
 							</div>
 
+
+							<!-- <div class="filter-mobile-footer">
+								<button class="filter-cancel-btn" id="filterCancel">Cancel</button>
+								<button class="filter-apply-btn">Apply Filters</button>
+							</div> -->
+
+
 						</div>
 					</div>
 
@@ -503,21 +518,24 @@ Purchase:
 							<ul>
 								<li>
 									<select>
-										<option value="">You're looking for: Everything</option>
-										<option value="">sort by price</option>
-										<option value="">sort by category</option>
-									</select>
-								</li>
-								<li>
-									<select>
 										<option value="">Sort by </option>
 										<option value="">sort by price</option>
 										<option value="">sort by category</option>
 									</select>
 								</li>
 								<li>
+									<button class="mobile-filter-btn">
+										<span class="filter-icon">
+											<svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+												<path d="M3 5h18M6 12h12M10 19h4" stroke="currentColor" stroke-width="2"
+													stroke-linecap="round" />
+											</svg>
+										</span>
+										<span class="filter-text">Filters</span>
+									</button>
 
 								</li>
+
 							</ul>
 						</div>
 
@@ -979,6 +997,8 @@ Purchase:
 
 	</div>
 	<!--=== End Main wraapper ===-->
+	<div class="filter-overlay" id="filterOverlay"></div>
+
 
 
 
