@@ -1481,6 +1481,12 @@ li.int_login_sign p:hover {
     transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 
+/* Show only on mobile */
+@media (max-width: 767px) {
+   .index4_btn{
+    font-size: 12px;
+   }
+}
 /* button css */
 /* checkbox start */
 .int_checkbox {
@@ -12789,7 +12795,7 @@ ul.comment_left {
 .int_sidebar_box {
     /* background: var(--bg-page); */
     border: 1px solid rgba(0, 0, 0, 0.06);
-    padding: 25px;
+    padding: 15px 25px;
     /* margin-bottom: 14px; */
     transition: all 0.25s ease;
 }
@@ -12829,6 +12835,8 @@ ul.comment_left {
 
 .int_sidebar_box.active>.filter-content {
     display: block;
+    margin-top: 25px;
+    padding-top: 0px;
 }
 
 /* ---------- CHECKLIST ---------- */
