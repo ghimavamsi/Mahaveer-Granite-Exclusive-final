@@ -41,8 +41,7 @@ Author: Kamleshyadav
 }
 
 body {
-    /* font-family: 'Yantramanav', sans-serif; */
-    font-family: 'Yantramanav', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
@@ -91,6 +90,7 @@ h3,
 h4,
 h5,
 h6 {
+    font-family:  "Playfair", serif;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
