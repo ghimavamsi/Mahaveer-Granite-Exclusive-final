@@ -1483,10 +1483,11 @@ li.int_login_sign p:hover {
 
 /* Show only on mobile */
 @media (max-width: 767px) {
-   .index4_btn{
-    font-size: 12px;
-   }
+    .index4_btn {
+        font-size: 12px;
+    }
 }
+
 /* button css */
 /* checkbox start */
 .int_checkbox {
@@ -6868,7 +6869,7 @@ ul.comment_left {
 
 .product_list_filter>ul>li {
     display: inline-block;
-    width: 33%;
+    width: 28%;
     text-align: left;
     color: var(--text-dark);
     background-color: var(--bg-page);
@@ -6887,15 +6888,16 @@ ul.comment_left {
 .product_list_filter>ul>li:first-child {
     text-align: left;
 }
+
 @media (min-width: 768px) {
-    .product_list_filter > ul > li:first-child {
+    .product_list_filter>ul>li:first-child {
         display: none;
     }
 }
 
 
 .product_list_filter>ul>li:last-child {
-    text-align: right;
+    text-align: center;
 }
 
 .product_list_filter ul.list_view_toggle>li {
@@ -10645,7 +10647,7 @@ ul.comment_left {
     }
 
     .int_banner_content h1 {
-        font-size: 32px;
+        font-size: 43px;
     }
 
     .int_categories_box_section .int_project_gallery .grid_img:before {
@@ -13747,28 +13749,29 @@ ul.comment_left {
     }
 }
 
-
 /* ===== OVERLAY ===== */
 .mg-enquiry-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(30, 30, 30, 0.6);
+    background: rgba(30, 30, 30, 0.65);
+    backdrop-filter: blur(4px);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
     z-index: 9998;
 }
 
-/* ===== MODAL ===== */
+/* ===== MODAL WRAPPER ===== */
 .mg-enquiry-modal {
     position: fixed;
     inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
     z-index: 9999;
 }
 
@@ -13780,106 +13783,170 @@ ul.comment_left {
 
 /* ===== BOX ===== */
 .mg-enquiry-box {
-    background: var(--bg-card);
     width: 100%;
-    max-width: 520px;
-    padding: 35px;
-    border-radius: 8px;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
-    transform: translateY(30px);
-    transition: all 0.3s ease;
+    max-width: 420px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.3);
+    transform: translateY(40px) scale(0.96);
+    transition: 0.3s ease;
 }
+
+.mg-enquiry-bg {
+    position: relative;
+    background: url('/assets/images/Insta/q5.jpg') center/cover no-repeat;
+    padding: 30px 25px 28px;
+}
+
+/* overlay */
+.mg-enquiry-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 30, 30, 0.75);
+}
+
+/* content above overlay */
+.mg-enquiry-content {
+    position: relative;
+    z-index: 2;
+}
+
+
 
 .mg-enquiry-modal.active .mg-enquiry-box {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
 
-/* HEADER */
+/* ===== TOP IMAGE ===== */
+.mg-enquiry-image {
+    width: 100%;
+    height: 100px;
+    /* reduced */
+}
+
+.mg-enquiry-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ===== CONTENT AREA ===== */
+.mg-enquiry-header {
+    padding: 28px 30px;
+}
+
+#mgEnquiryForm {
+    padding: 15px 22px 22px;
+}
+
 .mg-enquiry-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px;
 }
 
 .mg-enquiry-header h3 {
-    font-size: 22px;
-    color: var(--text-dark);
+    font-size: 20px;
+    color: var(--bg-section-alt);
 }
 
 .mg-close-modal {
     background: none;
     border: none;
-    font-size: 26px;
+    font-size: 22px;
     cursor: pointer;
-    color: var(--text-light);
+    color: var(--bg-page);
 }
 
-/* FORM */
+/* ===== FORM ===== */
 .mg-form-group {
-    margin-bottom: 18px;
+    margin-bottom: 12px;
 }
 
 .mg-form-group input,
 .mg-form-group textarea {
     width: 100%;
-    padding: 14px 16px;
-    border-radius: 4px;
+    padding: 10px 14px;
+    border-radius: 6px;
     border: 1px solid #ddd;
     background: #fff;
-    font-size: 15px;
-    transition: all 0.3s ease;
+    font-size: 14px;
+    transition: 0.25s ease;
 }
 
 .mg-form-group input:focus,
 .mg-form-group textarea:focus {
     border-color: var(--btn-primary);
     outline: none;
-    box-shadow: 0 0 0 2px rgba(122, 92, 72, 0.1);
+    box-shadow: 0 0 0 3px rgba(122, 92, 72, 0.08);
 }
 
-/* BUTTONS */
+/* ===== BUTTONS ===== */
 .mg-form-actions {
     display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 10px;
+    gap: 10px;
+    margin-top: 6px;
 }
 
-.mg-btn-primary {
+.mg-btn-primary-form {
     background: var(--btn-primary);
     color: #fff;
-    padding: 14px 22px;
+    padding: 10px 16px;
     border: none;
     font-size: 16px;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
 .mg-btn-primary:hover {
     background: var(--btn-primary-hover);
 }
 
-.mg-btn-cancel {
+.mg-btn-cancel-form {
     background: transparent;
-    border: 1px solid var(--btn-primary);
-    color: var(--btn-primary);
-    padding: 14px 22px;
-    border-radius: 4px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    padding: 9px 16px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
-.mg-btn-cancel:hover {
-    background: var(--btn-primary);
-    color: #fff;
+
+.mg-form-group {
+    margin-bottom: 12px;
 }
 
-/* RESPONSIVE */
+.mg-form-group input,
+.mg-form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+    color: #fff;
+    font-size: 14px;
+}
+
+.mg-form-group input::placeholder,
+.mg-form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.mg-form-group input:focus,
+.mg-form-group textarea:focus {
+    border-color: var(--btn-primary);
+    outline: none;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 576px) {
     .mg-enquiry-box {
-        padding: 25px;
-        margin: 0 15px;
+        max-width: 92%;
     }
 
     .mg-form-actions {
@@ -13889,9 +13956,9 @@ ul.comment_left {
     .mg-btn-primary,
     .mg-btn-cancel {
         width: 100%;
-        text-align: center;
     }
 }
+
 
 
 /* filter button */
@@ -14081,4 +14148,18 @@ ul.comment_left {
         background: var(--btn-primary-hover);
     }
 
+}
+
+
+@media (min-width: 768px) and (max-width:1198px) {
+    .int_nav {
+        padding-bottom: 18px !important;
+    }
+}
+
+@media (max-width:767px) {
+    .int_banner_content h1 {
+        font-size: 38px;
+        line-height: 40px;
+    }
 }
