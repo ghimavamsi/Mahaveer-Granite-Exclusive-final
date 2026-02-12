@@ -7875,13 +7875,14 @@ ul.comment_left {
 /* Index Product Single dark css end */
 /* Index2 Checkout page css start */
 .int_product_checkout {
-    padding: 80px 50px 80px;
+    background-color: var(--bg-section-alt);
+    padding: 60px 50px 30px;
 }
 
-.int_checkout_box {
+/* .int_checkout_box {
     border: solid 1px #f5f5f5;
     padding: 78px 50px 80px;
-}
+} */
 
 .int_white_progress {
     padding: 0 0 0 5px;
@@ -7975,7 +7976,7 @@ ul.comment_left {
 
 /* Radio button css */
 .int_debit_cart {
-    margin-top: 94px;
+    /* margin-top: 94px; */
 }
 
 .int_credit_cart {
@@ -8218,7 +8219,7 @@ ul.comment_left {
 .int_checkout_table .table thead th {
     vertical-align: middle;
     border-bottom: 1px solid #f5f5f5;
-    border-top: 1px solid #f5f5f5;
+    border-top: 1px solid var(--btn-primary);
     text-transform: capitalize;
     color: #707070;
     font-size: 18px;
@@ -8227,11 +8228,11 @@ ul.comment_left {
 .int_checkout_table .table td {
     vertical-align: middle;
     border-top: 1px solid #f5f5f5;
-    border-bottom: 1px solid #f5f5f5;
+    /* border-bottom: 1px solid #f5f5f5; */
 }
 
 .int_checkout_table a {
-    background-color: #ebebeb;
+    background-color: var(--bg-page);
     display: inline-block;
     border-radius: 40px;
     padding: 3px 11px;
@@ -8249,6 +8250,7 @@ ul.comment_left {
 }
 
 .int_checkout_table h4 {
+    margin-top: 20px;
     font-size: 20px;
     color: #222222;
     font-weight: 400;
@@ -9992,9 +9994,9 @@ ul.comment_left {
         margin-bottom: 15px;
     }
 
-    .int_checkout_box {
+    /* .int_checkout_box {
         padding: 48px 20px 50px;
-    }
+    } */
 
     .int_product_checkout_dark .int_checkout_box {
         padding: 48px 20px 50px;
@@ -10565,9 +10567,9 @@ ul.comment_left {
         margin-top: 10px;
     }
 
-    .int_debit_cart {
+    /* .int_debit_cart {
         margin-top: 80px;
-    }
+    } */
 
     .int_credit_cart {
         padding: 25px 20px;
@@ -12077,9 +12079,9 @@ ul.comment_left {
         padding: 50px 0 0px 0;
     }
 
-    .int_checkout_box {
+    /* .int_checkout_box {
         padding: 27px 20px 29px;
-    }
+    } */
 
     .int_product_checkout_dark .int_checkout_box {
         padding: 27px 20px 29px;
@@ -12275,9 +12277,9 @@ ul.comment_left {
         line-height: 35px;
     }
 
-    .int_checkout_box {
+    /* .int_checkout_box {
         padding: 85px 20px 50px;
-    }
+    } */
 
     .int_product_checkout_dark .int_checkout_box {
         padding: 85px 20px 50px;
@@ -14161,5 +14163,174 @@ ul.comment_left {
     .int_banner_content h1 {
         font-size: 38px;
         line-height: 40px;
+    }
+}
+
+
+/* ============MY ACCOUNT PAGE========== */
+.product-cell {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.product-cell img {
+    /* margin-left: 20px; */
+    width: 50px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.product-cell span {
+    white-space: nowrap;
+}
+
+.product-cell span {
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.enq_btn_wishlist {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+
+    background: var(--btn-primary);
+    color: #fff;
+    border: 1px solid var(--btn-primary);
+
+    border-radius: 0;
+    /* no radius */
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+/* Hover */
+.enq_btn_wishlist:hover {
+    background: var(--btn-primary-hover);
+    border-color: var(--btn-primary-hover);
+    color: #fff;
+}
+
+/* Active */
+.enq_btn_wishlist:active {
+    transform: scale(0.98);
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .enq_btn_wishlist {
+        padding: 7px 14px;
+        font-size: 13px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .enq_btn_wishlist {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+
+/* =========================
+   ACCOUNT PROFILE PANEL
+========================= */
+
+.account-profile-box {
+    /* background: #fff; */
+    padding: 35px 25px;
+    border: 1px solid var(--btn-primary);
+    text-align: center;
+    height: fit-content;
+}
+
+/* Avatar */
+.account-avatar {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: var(--bg-page);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--btn-primary);
+}
+
+/* Name */
+.account-name {
+    /* font-size: 18px; */
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #222;
+}
+
+/* Email + Phone */
+.account-email,
+.account-phone {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 6px;
+}
+
+/* Logout Button */
+.account-logout-btn {
+    margin-top: 20px;
+    width: 45%;
+    padding: 5px 0;
+    background: transparent;
+    border: 1px solid var(--btn-primary);
+    color: var(--btn-primary);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.account-logout-btn:hover {
+    background: var(--btn-primary);
+    color: #fff;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Tablet */
+@media (max-width: 991px) {
+    .account-profile-box {
+        justify-content: center;
+        margin-bottom: 30px;
+        padding: 30px 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .account-profile-box {
+        padding: 25px 15px;
+    }
+
+    .account-avatar {
+        width: 75px;
+        height: 75px;
+    }
+
+    .account-name {
+        font-size: 20px;
     }
 }

@@ -52,7 +52,7 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: var(--bg-page);
-    background-color: var(--btn-primary);
+    background-color: #F4EFE9;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent
 }
