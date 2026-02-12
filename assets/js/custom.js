@@ -1129,31 +1129,35 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// ===== ENQUERY MODAL POPUP======
+// ===== ENQUIRY MODAL POPUP =====
 jQuery(document).ready(function () {
   const modal = jQuery("#mgEnquiryModal");
   const overlay = jQuery("#mgEnquiryOverlay");
 
-  jQuery("#mgOpenEnquiry").on("click", function () {
+  // OPEN MODAL (multiple buttons support)
+  jQuery(document).on("click", ".mgOpenEnquiry", function () {
     modal.addClass("active");
     overlay.addClass("active");
     jQuery("body").css("overflow", "hidden");
   });
 
+  // CLOSE FUNCTION
   function closeModal() {
     modal.removeClass("active");
     overlay.removeClass("active");
     jQuery("body").css("overflow", "auto");
   }
 
-  jQuery("#mgCloseEnquiry, #mgCancelEnquiry, #mgEnquiryOverlay").on(
+  // CLOSE BUTTONS + OVERLAY
+  jQuery(document).on(
     "click",
+    "#mgCloseEnquiry, #mgCancelEnquiry, #mgEnquiryOverlay",
     function () {
       closeModal();
     },
   );
 
-  // optional: close on ESC
+  // CLOSE ON ESC
   jQuery(document).on("keydown", function (e) {
     if (e.key === "Escape") {
       closeModal();
