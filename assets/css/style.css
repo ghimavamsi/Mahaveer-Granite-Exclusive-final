@@ -22,6 +22,14 @@ Author: Kamleshyadav
 /********************************************************
 1. body start
  *******************************************************/
+@font-face {
+    font-family: "CamelliaSignature";
+    src: url("/assets/css/fonts/CamelliaSignatureDEMO!-DEMO!.woff") format("woff2"),
+        url("/assets/css/fonts/CamelliaSignatureDEMO!-DEMO!.woff2") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
     /* Backgrounds */
@@ -55,6 +63,17 @@ body {
     padding: 0;
     margin: 0;
 }
+
+.sec_small_heading {
+    font-family: "CamelliaSignature", sans-serif;
+    font-size: 14px;
+}
+
+.sec_small_heading span {
+    font-family: "Inter", sans-serif;
+    /* font-size: 16px; */
+}
+
 
 body.int_dark_bg {
     background-color: var(--bg-page);
@@ -4563,7 +4582,7 @@ span.close_menu_int {
 /* Index v3 Product Slider css end*/
 .int_client_slider {
     background-color: var(--bg-card);
-    padding: 60px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -6872,7 +6891,7 @@ ul.comment_left {
     width: 28%;
     text-align: left;
     color: var(--text-dark);
-    background-color: var(--bg-page);
+    /* background-color: var(--bg-page); */
     border: 2px solid var(--text-light);
     font-weight: 600;
     font-size: 18px;
@@ -8231,12 +8250,28 @@ ul.comment_left {
     /* border-bottom: 1px solid #f5f5f5; */
 }
 
-.int_checkout_table a {
+/* .int_checkout_table a {
     background-color: var(--bg-page);
     display: inline-block;
     border-radius: 40px;
     padding: 3px 11px;
+} */
+
+
+
+.int_checkout_table td a {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--bg-page);
+    line-height: 0;
 }
+
+
+
 
 .int_checkout_table img {
     border: solid 1px #f1f1f1;
@@ -9500,7 +9535,7 @@ ul.comment_left {
 
     .int_nav .int_menu>ul>li,
     .int_cartsec>ul>li {
-        /* padding: 45px 5px 45px; */
+        padding: 30px 5px 30px;
     }
 
     .int_project_gallery .grid-item:hover .top_content {
@@ -11325,9 +11360,9 @@ ul.comment_left {
         padding: 47px 0 0;
     }
 
-    .int_client_slider {
+    /* .int_client_slider {
         padding: 50px 0;
-    }
+    } */
 
     .int_footer_partner_style3 {
         margin-top: 0;
@@ -12685,7 +12720,7 @@ ul.comment_left {
     display: block;
     width: 50px;
     height: 2px;
-    background: #e25a3c;
+    background: var(--btn-primary);
     margin: 8px auto 0;
 }
 
@@ -14332,5 +14367,186 @@ ul.comment_left {
 
     .account-name {
         font-size: 20px;
+    }
+}
+
+
+/*========================== about section images css */
+.about_overlap_wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.overlap_item {
+    width: 186px;
+    height: 330px;
+    border-radius: 120px;
+    overflow: hidden;
+    border: 10px solid var(--bg-page);
+    position: relative;
+    background: var(--bg-page);
+}
+
+.about_left {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* All images same height */
+.overlap_item img {
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    display: block;
+}
+
+/* Overlap effect */
+.overlap_item:not(:first-child) {
+    margin-left: -60px;
+    /* Controls overlap amount */
+}
+
+/* Control stacking order */
+.overlap_item:nth-child(1) {
+    z-index: 1;
+}
+
+.overlap_item:nth-child(2) {
+    z-index: 2;
+}
+
+.overlap_item:nth-child(3) {
+    z-index: 3;
+}
+
+.overlap_item:nth-child(4) {
+    z-index: 4;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .about_overlap_wrapper {
+        justify-content: center;
+    }
+
+    .overlap_item {
+        width: 130px;
+        height: 250px;
+    }
+
+    .about_content .sec_small_heading{
+
+        margin-top: 20px;
+    }
+}
+
+/* ==========client swiper ============== */
+.int_client_slider .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.int_client_slider .swiper-slide {
+  width: auto;
+}
+
+.int_client_slider .swiper-slide:hover img {
+    filter: grayscale(100%) brightness(0);
+}
+
+
+.int_client_slider .swiper-slide img {
+    transition: 0.4s ease;
+}
+
+.int_client_slider .swiper-slide:hover img {
+    filter: grayscale(100%);
+}
+
+.int_client_slider .swiper-slide img {
+    width: 80%;
+    height: 100%;
+    transition: 0.4s ease;
+}
+
+.int_client_slider .swiper-slide:hover img {
+    filter: grayscale(100%);
+    opacity: 0.8;
+}
+
+.our_clients{
+    margin: 20px;
+}
+
+/* ======= SLIDER ZOOM ======== */
+.int_index4_slider_style4 .swiper-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background layer */
+.int_index4_slider_style4 .slide-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1);
+    transition: transform 14s ease;
+    z-index: 0;
+}
+
+/* Overlay */
+.int_index4_slider_style4 .swiper-slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Content */
+.int_index4_slider_style4 .int_banner_content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Zoom ONLY background */
+.int_index4_slider_style4 .swiper-slide-active .slide-bg {
+    transform: scale(1.12);
+}
+
+/* ============================= */
+/*   MODERN HERO TEXT SYSTEM    */
+/* ============================= */
+
+/* Initial state */
+.swiper-slide .hero-title span,
+.swiper-slide .hero-para {
+    display: block;
+    transform: translateY(80px);
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+/* Active slide animation */
+.swiper-slide-active .hero-title span {
+    animation: heroTextReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.swiper-slide-active .hero-title span:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.swiper-slide-active .hero-para {
+    animation: heroTextReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 0.5s;
+}
+
+/* Keyframe */
+@keyframes heroTextReveal {
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

@@ -508,35 +508,40 @@ Assigned to: Theme Forest
     },
     //Product Slider Js end
 
-    //Product Slider Js start
     index3_client_slider: function () {
-      if ($(".int_client_slider").length > 0) {
-        var swiper = new Swiper(".int_client_slider .swiper-container", {
+  if ($(".int_client_slider").length > 0) {
+    var swiper = new Swiper(".int_client_slider .swiper-container", {
+      slidesPerView: 6,
+      spaceBetween: 80,
+      loop: true,
+      speed: 3000,
+      allowTouchMove: false,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        1024: {
           slidesPerView: 6,
-          spaceBetween: 50,
-          loop: true,
-          breakpoints: {
-            1024: {
-              slidesPerView: 6,
-              spaceBetween: 30,
-            },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 30,
-            },
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            320: {
-              slidesPerView: 2,
-              spaceBetween: 10,
-            },
-          },
-        });
-      }
-    },
-    //Product Slider Js end
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+      },
+    });
+  }
+},
+
 
     //Index 3 Testimonial
     index3_testimonial: function () {
@@ -606,20 +611,41 @@ Assigned to: Theme Forest
     //Index 3 Testimonial
 
     //Index 4 Banner Slider
+    // index4_banner_slider: function () {
+    //   var swiper = new Swiper(".int_index4_slider_style4 .swiper-container", {
+    //     loop: true,
+    //     speed: 2000,
+    //     slidesPerView: 1,
+    //     autoplay: true,
+    //     effect: "fade",
+    //     fadeEffect: { crossFade: true },
+    //     pagination: {
+    //       el: ".int_index4_slider_style4 .swiper-pagination",
+    //       clickable: true,
+    //     },
+    //   });
+    // },
+
     index4_banner_slider: function () {
-      var swiper = new Swiper(".int_index4_slider_style4 .swiper-container", {
-        loop: true,
-        speed: 2000,
-        slidesPerView: 1,
-        autoplay: true,
-        effect: "fade",
-        fadeEffect: { crossFade: true },
-        pagination: {
-          el: ".int_index4_slider_style4 .swiper-pagination",
-          clickable: true,
-        },
-      });
-    },
+  if ($(".int_index4_slider_style4").length > 0) {
+    new Swiper(".int_index4_slider_style4 .swiper-container", {
+      loop: true,
+      speed: 1400,
+      slidesPerView: 1,
+      effect: "fade",
+      fadeEffect: { crossFade: true },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".int_index4_slider_style4 .swiper-pagination",
+        clickable: true,
+      },
+    });
+  }
+},
+
     //Index 3 Banner Slider
 
     // Index4 Testimonial Slider
