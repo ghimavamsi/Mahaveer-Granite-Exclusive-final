@@ -1250,3 +1250,23 @@ window.addEventListener("load", function () {
 swiper.on("slideChange", function () {
   AOS.refresh();
 });
+
+
+// ======= WISHLIST INCREMENTOR
+document.addEventListener("DOMContentLoaded", function () {
+
+    const plus = document.querySelector(".qty_plus");
+    const minus = document.querySelector(".qty_minus");
+    const input = document.querySelector(".qty_value");
+
+    plus.addEventListener("click", function () {
+        input.value = parseInt(input.value) + 1;
+    });
+
+    minus.addEventListener("click", function () {
+        if (parseInt(input.value) > 1) {
+            input.value = parseInt(input.value) - 1;
+        }
+    });
+
+});

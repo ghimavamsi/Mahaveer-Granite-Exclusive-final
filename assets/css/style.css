@@ -759,14 +759,14 @@ li.int_login_sign p:hover {
 }
 
 .int_sign_slide .swiper-pagination-bullets {
-    bottom: -60px;
+    bottom: -10px;
     right: 0;
     left: 0;
 }
 
 .int_sign_section {
     background-color: var(--bg-page);
-    padding: 50px 60px;
+    padding: 20px 50px;
     text-align: center;
     position: relative;
 }
@@ -785,20 +785,20 @@ li.int_login_sign p:hover {
 .int_sign_section .close_login {
     font-size: 26px;
     font-weight: normal;
-    color: var(--btn-primary);
+    color: var(--bg-page);
     text-shadow: none;
     opacity: 1;
 }
 
 .int_sign_section p {
-    color: #cdcdcd;
+    color: var(--text-dark);
     margin-top: 10px;
 }
 
 .int_sign_section h3 {
     color: var(--btn-primary);
     font-weight: 600;
-    margin: 25px 0;
+    margin: 6px 0;
 }
 
 .int_sign_section .form_block {
@@ -806,7 +806,7 @@ li.int_login_sign p:hover {
 }
 
 .int_sign_section .form_block .form_field {
-    border: 1px solid #383b3f;
+    border: 1px solid var(--text-primary);
     background-color: var(--bg-page);
     color: var(--btn-primary);
 }
@@ -818,7 +818,6 @@ li.int_login_sign p:hover {
 .int_sign_forgot ul {
     text-align: right;
     margin-right: 30px;
-    margin-top: 30px;
 }
 
 .int_sign_forgot ul li {
@@ -831,7 +830,7 @@ li.int_login_sign p:hover {
 }
 
 .int_sign_forgot ul li a {
-    color: var(--btn-primary);
+    color:var(--text-secondary);
 }
 
 .int_sign_forgot ul li:first-child a:hover {
@@ -7645,9 +7644,9 @@ ul.comment_left {
 }
 
 .form_block .form_field {
-    height: 50px;
+    height: 40px;
     width: 100%;
-    padding: 0px 30px;
+    padding: 0px 10px;
     border: 1px solid #ebebeb;
     outline: none;
 }
@@ -10786,7 +10785,7 @@ ul.comment_left {
     }
 
     .int_sign_section {
-        padding: 40px 30px;
+        padding: 10px 30px;
     }
 
     .int_team2_sideimg {
@@ -12497,7 +12496,7 @@ ul.comment_left {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 999;
     background: var(--bg-page) !important;
 }
 
@@ -13651,7 +13650,7 @@ ul.comment_left {
 .acc-header {
     color: var(--btn-primary);
     width: 100%;
-    padding: 18px 0;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14639,7 +14638,7 @@ ul.comment_left {
     stroke-dasharray: 1200;
     stroke-dashoffset: 1200;
     animation: textDraw 10s ease forwards,
-        textFill 2s ease forwards 7s;
+        textFill 2s ease forwards 5s;
 
 }
 
@@ -14656,4 +14655,179 @@ ul.comment_left {
         fill: var(--bg-card);
         stroke-width: 0;
     }
+}
+
+
+/* ===========form login/signup========= */
+.logo-form{
+    max-width: 60%;
+    height: auto;
+}
+
+/* Reduce input height */
+.form_field {
+    height: 42px;
+}
+
+/* OTP layout */
+.otp_block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* OTP input smaller width */
+.otp_input {
+    flex: 1;
+    max-width: 160px;
+}
+
+/* Buttons side by side */
+.otp_actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Small clean buttons */
+.otp_btn,
+.otp_resend {
+    height: 42px;
+    padding: 0 14px;
+    border: 1px solid var(--text-primary);
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+    color: var(--text-light);
+}
+
+.otp_btn:hover,
+.otp_resend:hover {
+    background: #bfa79a;
+    color: #fff;
+}
+
+.checkbox{
+    background: transparent;
+    color: var(--text-primary);
+}
+
+/* Wrapper */
+.custom_check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+}
+
+/* Hide default checkbox */
+.custom_check input {
+    display: none;
+}
+
+/* Custom box */
+.custom_check .checkmark {
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid #bfa79a;
+    background: transparent;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* Checked background */
+.custom_check input:checked + .checkmark {
+    background: #bfa79a;
+    border-color: #bfa79a;
+}
+
+/* Tick mark */
+.custom_check .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 9px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* Show tick when checked */
+.custom_check input:checked + .checkmark::after {
+    opacity: 1;
+}
+
+/* Hover effect */
+.custom_check:hover .checkmark {
+    border-color: #d2b9ad;
+}
+
+.form_row {
+    display: flex;
+    gap: 15px;
+}
+
+.form_block.half {
+    flex: 1;
+}
+
+/* Mobile responsive */
+@media (max-width: 767px) {
+    .form_row {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+/* ======wishlist incrementor======== */
+.product_actions {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+}
+
+/* Vertical Quantity */
+.qty_vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #bfa79a;
+    width: 38px;
+    height: 44px;
+}
+
+/* Icons */
+.qty_icon {
+    border: none;
+    background: transparent;
+    height: 14px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty_icon:hover {
+    background: #bfa79a;
+    color: #fff;
+}
+
+/* Middle Value */
+.qty_value {
+    border: none;
+    text-align: center;
+    font-size: 13px;
+    height: 16px;
+    outline: none;
+    background: transparent;
 }
