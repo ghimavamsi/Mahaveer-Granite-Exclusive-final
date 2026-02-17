@@ -509,39 +509,40 @@ Assigned to: Theme Forest
     //Product Slider Js end
 
     index3_client_slider: function () {
-  if ($(".int_client_slider").length > 0) {
-    var swiper = new Swiper(".int_client_slider .swiper-container", {
-      slidesPerView: 6,
-      spaceBetween: 80,
-      loop: true,
-      speed: 3000,
-      allowTouchMove: false,
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-      },
-      breakpoints: {
-        1024: {
+      if ($(".int_client_slider").length > 0) {
+        var swiper = new Swiper(".int_client_slider .swiper-container", {
           slidesPerView: 6,
-          spaceBetween: 30,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 15,
-        },
-        320: {
-          slidesPerView: 2,
-          spaceBetween: 10,
-        },
-      },
-    });
-  }
-},
+          spaceBetween: 80,
+          loop: true,
+          speed: 3000,
+          allowTouchMove: false,
+          autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+          },
+          breakpoints: {
+            1024: { slidesPerView: 6, spaceBetween: 30 },
+            768: { slidesPerView: 3, spaceBetween: 20 },
+            640: { slidesPerView: 2, spaceBetween: 15 },
+            320: { slidesPerView: 2, spaceBetween: 10 },
+          },
+        });
 
+        const container = $(".int_client_slider .swiper-container");
+
+        container.on("mouseenter", function () {
+          if (swiper.autoplay.running) {
+            swiper.autoplay.stop();
+          }
+        });
+
+        container.on("mouseleave", function () {
+          if (!swiper.autoplay.running) {
+            swiper.autoplay.start();
+          }
+        });
+      }
+    },
 
     //Index 3 Testimonial
     index3_testimonial: function () {
@@ -627,24 +628,42 @@ Assigned to: Theme Forest
     // },
 
     index4_banner_slider: function () {
-  if ($(".int_index4_slider_style4").length > 0) {
-    new Swiper(".int_index4_slider_style4 .swiper-container", {
-      loop: true,
-      speed: 1400,
-      slidesPerView: 1,
-      effect: "fade",
-      fadeEffect: { crossFade: true },
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".int_index4_slider_style4 .swiper-pagination",
-        clickable: true,
-      },
-    });
-  }
-},
+      if ($(".int_index4_slider_style4").length > 0) {
+        var swiper = new Swiper(".int_index4_slider_style4 .swiper-container", {
+          loop: true,
+          speed: 1400,
+          slidesPerView: 1,
+          effect: "fade",
+          fadeEffect: { crossFade: true },
+          autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".int_index4_slider_style4 .swiper-pagination",
+            clickable: true,
+          },
+
+          on: {
+            init: function () {
+              AOS.refresh();
+            },
+
+            slideChangeTransitionEnd: function () {
+              // Remove animation from all slides
+              $(
+                ".int_index4_slider_style4 .swiper-slide [data-aos]",
+              ).removeClass("aos-animate");
+
+              // Trigger only active slide animation
+              $(
+                ".int_index4_slider_style4 .swiper-slide-active [data-aos]",
+              ).addClass("aos-animate");
+            },
+          },
+        });
+      }
+    },
 
     //Index 3 Banner Slider
 
@@ -1216,16 +1235,18 @@ if (closeBtn) closeBtn.addEventListener("click", closeFilter);
 if (cancelBtn) cancelBtn.addEventListener("click", closeFilter);
 if (overlay) overlay.addEventListener("click", closeFilter);
 
-
 // AOS animation js
 AOS.init({
-    duration: 1000,
-    easing: "ease-out-cubic",
-    once: true,
-    mirror: false
+  duration: 1000,
+  easing: "ease-out-cubic",
+  once: false,
+  mirror: false,
 });
 
+window.addEventListener("load", function () {
+  AOS.refresh();
+});
 
-swiper.on('slideChange', function () {
-    AOS.refresh();
+swiper.on("slideChange", function () {
+  AOS.refresh();
 });
