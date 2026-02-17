@@ -1215,3 +1215,17 @@ function closeFilter() {
 if (closeBtn) closeBtn.addEventListener("click", closeFilter);
 if (cancelBtn) cancelBtn.addEventListener("click", closeFilter);
 if (overlay) overlay.addEventListener("click", closeFilter);
+
+
+// AOS animation js
+AOS.init({
+    duration: 1000,
+    easing: "ease-out-cubic",
+    once: true,
+    mirror: false
+});
+
+
+swiper.on('slideChange', function () {
+    AOS.refresh();
+});
