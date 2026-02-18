@@ -436,7 +436,18 @@
 													</td>
 
 													<td>
-														<h4>01</h4>
+														<div class="int_table_quantity">
+															<div class="quantity_wrapper">
+																<!-- <div class="quantity_qty">
+                                                    <span>Qty</span>
+                                                </div> -->
+																<div class="input-group">
+																	<span class="quantity_minus"> - </span>
+																	<input type="text" class="quantity" value="2">
+																	<span class="quantity_plus"> + </span>
+																</div>
+															</div>
+														</div>
 													</td>
 													<td>
 														<!-- <div class="int_table_quantity">
@@ -528,7 +539,16 @@
 													</td>
 
 													<td>
-														<h4>03</h4>
+														<div class="int_table_quantity">
+															<div class="quantity_wrapper">
+
+																<div class="input-group">
+																	<span class="quantity_minus"> - </span>
+																	<input type="text" class="quantity" value="2">
+																	<span class="quantity_plus"> + </span>
+																</div>
+															</div>
+														</div>
 													</td>
 													<td>
 														<button class="enq_btn_wishlist mgOpenEnquiry">Enquire
@@ -607,7 +627,16 @@
 													</td>
 
 													<td>
-														<h4>01</h4>
+														<div class="int_table_quantity">
+															<div class="quantity_wrapper">
+
+																<div class="input-group">
+																	<span class="quantity_minus"> - </span>
+																	<input type="text" class="quantity" value="2">
+																	<span class="quantity_plus"> + </span>
+																</div>
+															</div>
+														</div>
 													</td>
 													<td>
 														<button class="enq_btn_wishlist mgOpenEnquiry">Enquire
@@ -686,7 +715,16 @@
 													</td>
 
 													<td>
-														<h4>04</h4>
+														<div class="int_table_quantity">
+															<div class="quantity_wrapper">
+
+																<div class="input-group">
+																	<span class="quantity_minus"> - </span>
+																	<input type="text" class="quantity" value="2">
+																	<span class="quantity_plus"> + </span>
+																</div>
+															</div>
+														</div>
 													</td>
 													<td>
 														<button class="enq_btn_wishlist mgOpenEnquiry">Enquire
@@ -943,19 +981,52 @@
 
 			const modal = document.getElementById("mgPromoModal");
 			const closeBtn = document.getElementById("mgPromoClose");
+			const form = modal.querySelector("form");
 
-			if (!modal || !closeBtn) return;
+			if (!modal || !closeBtn || !form) return;
 
-			setTimeout(function () {
+			const MODAL_KEY = "mgPromoSubmitted";
+			const CLOSE_KEY = "mgPromoClosed";
+
+			function openModal() {
+				if (sessionStorage.getItem(MODAL_KEY)) return;
 				modal.classList.add("active");
-			}, 3000); // change to 30000 later
+			}
 
-			closeBtn.addEventListener("click", function () {
+			function closeModal() {
 				modal.classList.remove("active");
+				sessionStorage.setItem(CLOSE_KEY, "true");
+
+				// reopen after 1 minute if not submitted
+				setTimeout(() => {
+					if (!sessionStorage.getItem(MODAL_KEY)) {
+						modal.classList.add("active");
+					}
+				}, 6000); // 1 minute
+			}
+
+			// Initial 30 sec trigger
+			setTimeout(() => {
+				if (!sessionStorage.getItem(MODAL_KEY)) {
+					openModal();
+				}
+			}, 3000);
+
+			closeBtn.addEventListener("click", closeModal);
+
+			form.addEventListener("submit", function (e) {
+				e.preventDefault();
+
+				sessionStorage.setItem(MODAL_KEY, "true");
+				modal.classList.remove("active");
+
+				// Here you can add AJAX later
+				console.log("Form submitted");
 			});
 
 		});
 	</script>
+
 
 
 

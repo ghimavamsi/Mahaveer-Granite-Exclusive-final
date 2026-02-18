@@ -15094,11 +15094,11 @@ ul.comment_left {
     }
 
     .int_checkout_table {
-        min-width: 650px; /* forces horizontal scroll */
+        min-width: 650px; 
     }
 
     .product-img {
-        width: 100px; /* smaller image */
+        width: 100px; 
     }
 
     .product-img img {
