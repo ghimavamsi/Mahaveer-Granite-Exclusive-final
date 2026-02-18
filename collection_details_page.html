@@ -92,7 +92,7 @@
 											</a>
 										</li> -->
                                         <li>
-                                            <a href="my_account.html" class="cart_round box_add">
+                                            <a href="wishlist.html" class="cart_round box_add">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="17px" height="16px"
                                                     viewBox="0 0 24 24">
                                                     <path fill="var(--btn-primary)"
@@ -308,7 +308,7 @@
                             <svg class="imageBanner_heading" viewBox="0 0 1000 150" width="100%" height="150">
 
                                 <text x="50%" y="50%" dy=".35em" text-anchor="middle" class="imageBanner_text">
-                                    Collection Details
+                                    Product Details
                                 </text>
 
                             </svg>
@@ -318,7 +318,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-6 col-12 p-0">
                         <div class="int_home_crumbs">
                             <ul>
-                                <li><a href="index.html">Home // </a><span>Collection Details</span></li>
+                                <li><a href="index.html">Home // </a><span>Product Details</span></li>
                             </ul>
                         </div>
                     </div>
@@ -490,12 +490,25 @@
                                 <div class="mg-action-row">
                                     <div class="product_actions">
 
+                                        <div class="int_table_quantity">
+                                            <div class="quantity_wrapper">
+                                                <!-- <div class="quantity_qty">
+                                                    <span>Qty</span>
+                                                </div> -->
+                                                <div class="input-group">
+                                                    <span class="quantity_minus"> - </span>
+                                                    <input type="text" class="quantity" value="2">
+                                                    <span class="quantity_plus"> + </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <a href="#" class="mg-btn mg-btn-outline">
                                             <i class="far fa-heart"></i>
                                             Add to Wishlist
                                         </a>
 
-                                        <div class="qty_vertical">
+                                        <!-- <div class="qty_vertical">
                                             <button type="button" class="qty_icon qty_plus">
                                                 <i class="fas fa-chevron-up"></i>
                                             </button>
@@ -505,7 +518,7 @@
                                             <button type="button" class="qty_icon qty_minus">
                                                 <i class="fas fa-chevron-down"></i>
                                             </button>
-                                        </div>
+                                        </div> -->
 
                                     </div>
 
@@ -1017,12 +1030,68 @@
         </div>
         <!-- ENQUIRY MODAL END-->
 
+        <!-- Promotional Modal -->
+        <div class="mg-modal" id="mgPromoModal">
+
+            <button class="mg-close" id="mgPromoClose">&times;</button>
+
+            <div class="mg-modal-content">
+
+                <h3>Exclusive Granite Collection</h3>
+
+                <p class="mg-subtext">
+                    Discover premium surfaces crafted for timeless interiors.
+                    Visit Mahaveer Granite Exclusive showroom and get personalized assistance
+                    for your next project.
+                </p>
+
+                <form class="mg-form">
+
+                    <div class="mg-input-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+
+                    <div class="mg-input-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+
+                    <div class="mg-input-group">
+                        <input type="text" placeholder="Address" required>
+                    </div>
+
+                    <button type="submit" class="mg-submit-btn">
+                        Get Special Offer
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
 
     </div>
     <!--=== End Main wraapper ===-->
 
 
 
+    <!-- =======Pramotional Modal Popup========== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const modal = document.getElementById("mgPromoModal");
+            const closeBtn = document.getElementById("mgPromoClose");
+
+            if (!modal || !closeBtn) return;
+
+            setTimeout(function () {
+                modal.classList.add("active");
+            }, 3000); // change to 30000 later
+
+            closeBtn.addEventListener("click", function () {
+                modal.classList.remove("active");
+            });
+
+        });
+    </script>
 
     <!--=== Optional JavaScript ===-->
     <script src="assets/js/jquery.min.js" type="74c99ccc12419fbf5c2b436f-text/javascript"></script>

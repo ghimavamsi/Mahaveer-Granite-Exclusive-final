@@ -96,7 +96,7 @@
 											</a>
 										</li> -->
 										<li>
-											<a href="my_account.html" class="cart_round box_add">
+											<a href="wishlist.html" class="cart_round box_add">
 												<svg xmlns="http://www.w3.org/2000/svg" width="17px" height="16px"
 													viewBox="0 0 24 24">
 													<path fill="var(--btn-primary)"
@@ -626,7 +626,7 @@
 					<div class="col-md-12">
 						<div class="int_heading">
 							<h4 class="sec_small_heading" data-aos="fade-left">Latest Products<span>Latest</span></h4>
-							<h2 data-aos="fade-right">Latest Surface Collections</h2>
+							<h2 data-aos="fade-right">Latest Surface Products</h2>
 							<p data-aos="fade-up">Explore our newest arrivals—featuring refined finishes, updated
 								textures, and
 								materials
@@ -1464,6 +1464,44 @@
 		</div>
 		<!--===Start Bottom Footer Section===-->
 
+		<!-- Promotional Modal -->
+		<div class="mg-modal" id="mgPromoModal">
+
+			<button class="mg-close" id="mgPromoClose">&times;</button>
+
+			<div class="mg-modal-content">
+
+				<h3>Exclusive Granite Collection</h3>
+
+				<p class="mg-subtext">
+					Discover premium surfaces crafted for timeless interiors.
+					Visit Mahaveer Granite Exclusive showroom and get personalized assistance
+					for your next project.
+				</p>
+
+				<form class="mg-form">
+
+					<div class="mg-input-group">
+						<input type="text" placeholder="Full Name" required>
+					</div>
+
+					<div class="mg-input-group">
+						<input type="tel" placeholder="Phone Number" required>
+					</div>
+
+					<div class="mg-input-group">
+						<input type="text" placeholder="Address" required>
+					</div>
+
+					<button type="submit" class="mg-submit-btn">
+						Get Special Offer
+					</button>
+
+				</form>
+
+			</div>
+		</div>
+
 	</div>
 	<!--=== End Main wraapper ===-->
 
@@ -1471,6 +1509,25 @@
 
 
 
+	<!-- =======Pramotional Modal Popup========== -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+
+			const modal = document.getElementById("mgPromoModal");
+			const closeBtn = document.getElementById("mgPromoClose");
+
+			if (!modal || !closeBtn) return;
+
+			setTimeout(function () {
+				modal.classList.add("active");
+			}, 3000); // change to 30000 later
+
+			closeBtn.addEventListener("click", function () {
+				modal.classList.remove("active");
+			});
+
+		});
+	</script>
 
 	<!-- AOS animations -->
 	<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
