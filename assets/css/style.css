@@ -5963,7 +5963,7 @@ span.close_menu_int {
 /* Index v2 Blog Category page css start */
 .int_blog_category {
     background-color: var(--bg-section-alt);
-    padding: 80px 0;
+    padding: 70px 0px 0px 0px;
 }
 
 .int_blog_box {
@@ -6017,7 +6017,7 @@ span.close_menu_int {
 
 .int_blog_post h2 {
     font-size: 26px;
-    color: #222222;
+    color: var(--text-primary);
 }
 
 .int_blog_post h2 a {
@@ -6497,12 +6497,12 @@ ul.post_link1 svg {
 }
 
 .int_blog_testimonial h5 {
-    color: var(--btn-primary);
+    color: var(--bg-page);
     font-size: 18px;
 }
 
 .int_blog_testimonial h3 {
-    color: var(--btn-primary);
+    color: var(--text-secondary);
     font-size: 18px;
     margin-top: 15px;
 }
@@ -6571,7 +6571,7 @@ ul.post_link1 svg {
 }
 
 .int_select_tag ul li i.fas.fa-tags {
-    color: var(--btn-primary);
+    color: var(--btn-primary-hover);
 }
 
 .int_select_social {
@@ -6584,7 +6584,7 @@ ul.post_link1 svg {
 }
 
 .int_select_social ul li a {
-    color: #b9b9b9;
+    color: var(--text-primary);
     margin-left: 15px;
 }
 
