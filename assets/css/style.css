@@ -1719,7 +1719,7 @@ li.int_login_sign p:hover {
  *******************************************************/
 .int_about_wrapper {
     padding-top: 70px;
-    padding-bottom: 120px;
+    padding-bottom: 70px;
 }
 
 .about_box_wrapper .about_imgbox {
@@ -2095,7 +2095,7 @@ li.int_login_sign p:hover {
 }
 
 .int_process_wrapper .process_box p {
-    color: var(--btn-primary);
+    color: var(--text-dark);
     margin: 0;
 }
 
@@ -2137,7 +2137,7 @@ li.int_login_sign p:hover {
     left: 0;
     right: 0;
     margin: auto;
-    background: #21262B;
+    background: var(--text-secondary);
     width: 100px;
     height: 100px;
     border-radius: 100%;
@@ -2165,7 +2165,7 @@ li.int_login_sign p:hover {
     right: 0;
     top: 11px;
     margin: auto;
-    color: #33393f;
+    color: var(--text-secondary);
     z-index: 2;
     content: "\f105";
     font-family: "Font Awesome 5 Free";
@@ -5678,7 +5678,8 @@ span.close_menu_int {
 }
 
 .int_process_wrapper.int_process_back_change2 {
-    background-image: url(../images/index2_counter_back.jpg);
+    /* background-image: url(../images/index2_counter_back.jpg); */
+    background-color: var(--bg-page);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -5688,7 +5689,7 @@ span.close_menu_int {
 .int_process_wrapper.int_process_back_change2:after {
     position: absolute;
     content: "";
-    background: rgba(0, 0, 0, 0.80);
+    /* background: rgba(0, 0, 0, 0.80); */
     left: 0;
     right: 0;
     top: 0;
@@ -5697,12 +5698,12 @@ span.close_menu_int {
 }
 
 .int_process_back_change2 .int_heading h4 {
-    color: var(--btn-primary);
+    color: var(--text-secondary);
 }
 
 .int_process_back_change2 .process_circle h2:after {
     background: transparent;
-    border: 6px solid rgba(57, 63, 69, 0.8);
+    border: 6px solid var(--text-secondary);
 }
 
 .int_process_back_change2 .process_box:hover h2:after {
@@ -6029,7 +6030,7 @@ span.close_menu_int {
 }
 
 .int_blog_post p {
-    color:var(--text-dark);
+    color: var(--text-dark);
     margin: 10px 0 25px;
 }
 
@@ -10218,9 +10219,15 @@ ul.comment_left {
     }
 
     .int_nav .int_menu>ul>li>a {
-        pointer-events: none;
+        /* pointer-events: none; */
         padding: 13px 20px 12px;
     }
+
+    /* Disable only for dropdown parent */
+    .int_nav .int_menu>ul>li.int_home_dropdown>a {
+        pointer-events: none;
+    }
+
 
     .int_nav .int_menu>ul>li.int_home_dropdown>ul>li>a {
         padding: 14px 0px 15px 40px;
@@ -15061,9 +15068,10 @@ ul.comment_left {
         width: 50% !important;
     }
 }
+
 @media (max-width: 767px) {
 
-    .int_heading h4{
+    .int_heading h4 {
         line-height: 30px;
     }
 }
@@ -15095,15 +15103,15 @@ ul.comment_left {
     }
 
     .int_checkout_table {
-        min-width: 650px; 
+        min-width: 650px;
     }
 
     .product-img {
-        width: 100px; 
+        width: 100px;
     }
 
     .product-img img {
-        height: 160px; 
+        height: 160px;
     }
 
     .product-title {
@@ -15131,7 +15139,7 @@ ul.comment_left {
     background: var(--bg-card);
     padding: 50px;
     border: 1px solid var(--text-primary);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.05);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.05);
 }
 
 /* LEFT SIDE */
@@ -15212,10 +15220,10 @@ ul.comment_left {
     transition: 0.3s ease;
 }
 
-.mg-input-wrap input:focus + label,
-.mg-input-wrap input:valid + label,
-.mg-input-wrap textarea:focus + label,
-.mg-input-wrap textarea:valid + label {
+.mg-input-wrap input:focus+label,
+.mg-input-wrap input:valid+label,
+.mg-input-wrap textarea:focus+label,
+.mg-input-wrap textarea:valid+label {
     top: -10px;
     font-size: 11px;
     color: var(--btn-primary);
@@ -15300,7 +15308,7 @@ ul.comment_left {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.45);
+    background: rgba(0, 0, 0, 0.45);
 }
 
 .mg-showcase-item h4 {
@@ -15327,11 +15335,18 @@ ul.comment_left {
 .elevation {
     background-image: url('../images/application_images/solar_gallery6.webp');
 }
+
 /* Keyframe — Move only half height (4 slides only) */
 @keyframes verticalLoop {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-2400px); }
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-2400px);
+    }
 }
+
 @media (max-width: 991px) {
 
     .mg-showcase-wrapper,
@@ -15340,11 +15355,17 @@ ul.comment_left {
     }
 
     @keyframes verticalLoop {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(-1800px); }
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(-1800px);
+        }
     }
 
 }
+
 @media (max-width: 767px) {
 
     .mg-showcase-wrapper,
@@ -15353,8 +15374,613 @@ ul.comment_left {
     }
 
     @keyframes verticalLoop {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(-1280px); }
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(-1280px);
+        }
     }
 
+}
+
+
+/* ====how we works section extra css======= */
+
+.work_p {
+    color: var(--text-dark);
+}
+
+/* ===================== SECTION ===================== */
+
+.mg-strength-section {
+    padding: 70px 0;
+    background: var(--bg-section-alt);
+}
+
+/* Heading */
+.mg-strength-heading h4 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.mg-strength-heading h2 {
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+/* ===================== GRID ===================== */
+
+.mg-strength-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* ===================== CARD ===================== */
+
+.mg-strength-card {
+    background: var(--bg-card);
+    padding: 45px 30px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.05);
+    transition: 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    height: 100%;
+}
+
+.mg-strength-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+}
+
+/* Icon */
+.mg-strength-icon {
+    font-size: 34px;
+    color: var(--btn-primary);
+    margin-bottom: 18px;
+}
+
+/* Title */
+.mg-strength-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* Description */
+.mg-strength-card p {
+    font-size: 14px;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 1199px) {
+    .mg-strength-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .mg-strength-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mg-strength-section {
+        padding: 60px 0;
+    }
+
+    .mg-strength-heading h2 {
+        font-size: 26px;
+        margin-bottom: 40px;
+    }
+}
+
+
+/*=== founder message section === */
+/* ================= MODERN FOUNDER ================= */
+
+.mg-founder-modern {
+    padding: 70px 0;
+    background: var(--bg-section-alt);
+    position: relative;
+}
+
+/* Grid */
+.mg-founder-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* ================= LEFT PROFILE ================= */
+
+.mg-founder-profile {
+    text-align: center;
+}
+
+.mg-founder-photo {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.mg-founder-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mg-founder-meta h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.mg-founder-meta span {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+/* ================= RIGHT MESSAGE ================= */
+
+.mg-founder-heading {
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    line-height: 1.3;
+    position: relative;
+}
+
+/* Message Card */
+.mg-founder-card {
+    position: relative;
+    background: var(--bg-card);
+    padding: 40px 50px;
+    border-radius: 14px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--btn-primary);
+}
+
+.mg-founder-card p {
+    font-size: 17px;
+    line-height: 1.9;
+    color: var(--text-dark);
+}
+
+/* Subtle Big Background Text */
+.mg-founder-modern:before {
+    content: "Founder";
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    font-size: 160px;
+    font-weight: 700;
+    color: rgba(0,0,0,0.03);
+    pointer-events: none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1199px) {
+    .mg-founder-grid {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .mg-founder-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .mg-founder-heading {
+        font-size: 26px;
+    }
+
+    .mg-founder-card {
+        padding: 30px;
+        text-align: left;
+    }
+
+    .mg-founder-modern:before {
+        font-size: 100px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (max-width: 576px) {
+
+    .mg-founder-modern {
+        padding: 80px 0;
+    }
+
+    .mg-founder-heading {
+        font-size: 22px;
+    }
+
+    .mg-founder-card p {
+        font-size: 15px;
+    }
+}
+
+/* Founder Card Adjustments */
+
+.mg-founder-card {
+    position: relative;
+    background: var(--bg-card);
+    padding: 50px 50px 40px;
+    border-radius: 14px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--btn-primary);
+}
+
+/* Elegant Quote Mark */
+.mg-quote-mark {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    font-size: 80px;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--btn-primary);
+    opacity: 0.08;
+}
+
+/* Message Text */
+.mg-founder-text {
+    font-size: 17px;
+    line-height: 1.9;
+    color: var(--text-dark);
+    margin-bottom: 25px;
+}
+
+/* Signature */
+.mg-founder-sign {
+        text-align: end;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--text-primary);
+}
+
+.mg-founder-sign span {
+    display: block;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+
+    .mg-founder-card {
+        padding: 35px 30px;
+    }
+
+    .mg-quote-mark {
+        font-size: 60px;
+        left: 20px;
+    }
+
+    .mg-founder-text {
+        font-size: 15px;
+    }
+}
+
+
+
+/* about page 2nd section */
+/* ================= GLOBAL TYPO ================= */
+
+.mg-section-label {
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.mg-section-title {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.mg-section-desc {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-dark);
+}
+
+/* ================= PRODUCT RANGE ================= */
+
+.mg-corporate-section {
+    padding: 70px 0;
+    background: var(--bg-section-alt);
+}
+
+.mg-range-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Feature Grid */
+
+.mg-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.mg-feature-card {
+    background: var(--bg-card);
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.04);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.04);
+    transition: 0.4s ease;
+}
+
+.mg-feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+}
+
+.mg-feature-card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.mg-feature-card p {
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+/* ================= PHILOSOPHY ================= */
+/* ================= DARK GRANITE PHILOSOPHY ================= */
+
+.mg-philosophy-section {
+    padding: 110px 0;
+    position: relative;
+    background: url('../images/slider3/kitchen\ banner.jpeg') center/cover no-repeat;
+    overflow: hidden;
+}
+
+/* Dark Overlay */
+.mg-philosophy-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(15,15,15,0.92),
+        rgba(25,25,25,0.88)
+    );
+}
+
+/* Inner Content */
+.mg-philosophy-inner {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    animation: mgFadeUp 1.2s ease forwards;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+/* Section Label */
+.mg-philosophy-section .mg-section-label {
+    color: rgba(255,255,255,0.65);
+}
+
+/* Title */
+.mg-philosophy-section .mg-section-title {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* Gold Accent Divider */
+.mg-divider {
+    width: 80px;
+    height: 2px;
+    margin: 0 auto 40px;
+    background: linear-gradient(to right, #b08d57, #d4af37);
+}
+
+/* Text */
+.mg-philosophy-text {
+    font-size: 18px;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.85);
+}
+
+/* Subtle Glow Pulse */
+.mg-divider {
+    animation: mgGlow 3s infinite ease-in-out;
+}
+
+@keyframes mgGlow {
+    0% { box-shadow: 0 0 0px rgba(212,175,55,0.2); }
+    50% { box-shadow: 0 0 12px rgba(212,175,55,0.5); }
+    100% { box-shadow: 0 0 0px rgba(212,175,55,0.2); }
+}
+
+/* Fade Up Animation */
+@keyframes mgFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 991px) {
+
+    .mg-philosophy-section {
+        padding: 90px 0;
+    }
+
+    .mg-philosophy-section .mg-section-title {
+        font-size: 28px;
+    }
+
+    .mg-philosophy-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .mg-philosophy-section {
+        padding: 70px 0;
+    }
+
+    .mg-philosophy-section .mg-section-title {
+        font-size: 22px;
+    }
+
+    .mg-philosophy-text {
+        font-size: 15px;
+    }
+}
+
+/* ================= SIMPLE FADE ANIMATION ================= */
+
+.mg-range-wrapper,
+.mg-philosophy-inner {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: mgFadeUp 1s ease forwards;
+}
+
+@keyframes mgFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1199px) {
+    .mg-range-wrapper {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .mg-range-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .mg-feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mg-section-title {
+        font-size: 28px;
+    }
+
+    .mg-philosophy-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .mg-corporate-section,
+    .mg-philosophy-section {
+        padding: 80px 0;
+    }
+
+    .mg-section-title {
+        font-size: 22px;
+    }
+
+    .mg-section-desc {
+        font-size: 15px;
+    }
+}
+
+.abt_heading{
+    line-height: 35px;
+}
+
+.mg-feature-card {
+    background: var(--bg-card);
+    padding: 40px 35px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.04);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.04);
+    transition: 0.4s ease;
+    text-align: left;
+}
+
+.mg-feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+}
+
+.mg-feature-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+
+.mg-feature-icon i {
+    font-size: 22px;
+    color: var(--btn-primary);
+}
+
+.mg-feature-card:hover .mg-feature-icon {
+    background: var(--btn-primary);
+}
+
+.mg-feature-card:hover .mg-feature-icon i {
+    color: #fff;
+}
+
+.mg-feature-card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.mg-feature-card p {
+    font-size: 14px;
+    color: var(--text-dark);
 }
