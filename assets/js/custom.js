@@ -5,6 +5,7 @@ Version: 1.0.0
 Assigned to: Theme Forest
 -------------------------------------------------------------------*/
 
+
 (function ($) {
   "use strict";
   var Inland = {
@@ -1252,4 +1253,5 @@ swiper.on("slideChange", function () {
 });
 
 
+// =======image scroll===
 

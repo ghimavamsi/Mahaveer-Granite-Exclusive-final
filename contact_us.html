@@ -16,6 +16,8 @@
 	<link rel="stylesheet" href="assets/css/magnific-popup.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="shortcut icon" type="image/ico" href="assets/images/favicon_mg.png" />
+	<!-- AOS animations -->
+	<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 	<!--=== custom css ===-->
 	<title>Mahaveer Granite</title>
 </head>
@@ -60,16 +62,9 @@
 									<ul>
 										<li class="int_home"><a href="index.html">home</a></li>
 										<li class="int_home"><a href="#">about us</a></li>
-										<li class="int_home_dropdown"><a href="javascript:;">Our Collections</a>
-											<ul>
-												<li><a href="categories.html">Kitchen Collections</a></li>
-												<li><a href="categories.html">Flooring Collections</a></li>
-												<li><a href="categories.html">Bathroom Collections</a></li>
-												<li><a href="categories.html">Elevation Collections</a></li>
-											</ul>
-										</li>
-										<li class="int_home"><a href="#">Latest Blogs</a> </li>
-										<li class="int_home"><a href="#">Contact Us</a> </li>
+										<li class="int_home"><a href="categories.html">Our Collections</a></li>
+										<li class="int_home"><a href="blogs.html">Latest Blogs</a> </li>
+										<li class="int_home"><a href="contact_us.html">Contact Us</a> </li>
 									</ul>
 								</div>
 								<div class="int_cartsec">
@@ -98,18 +93,13 @@
 											</a>
 
 										</li>
-										<li class="int_profile_carol">
-											<a href="javascript:;" class="setting_toggle"><img
-													src="assets/images/header_setting_img.jpg" alt="image"
-													class="img-fluid" />Amelia Carol <i
-													class="fas fa-caret-down toggle_caret"></i></a>
-										</li>
-										<li class="int_login_sign">
+
+										<!-- <li class="int_login_sign">
 											<a href="#" class="int_login_model"><i class="fas fa-sign-in-alt"></i> login
 												<p>/</p>
 											</a>
 											<a href="#" class="int_signup_model">register</a>
-										</li>
+										</li> -->
 									</ul>
 								</div>
 								<div class="int_toggle">
@@ -258,6 +248,65 @@
 		</section>
 		<!--===End Map Section===-->
 
+		<!--===Contact us Section===-->
+		<section class="mg-contact-section">
+			<div class="container">
+
+				<div class="mg-contact-card-horizontal" data-aos="zoom-in" data-aos-delay="100">
+
+					<!-- LEFT CONTENT -->
+					<div class="mg-contact-left">
+						<span class="mg-contact-tag">Mahaveer Granite Exclusive</span>
+
+						<h2 class="mg-contact-title">
+							Visit Our Showroom & Get Expert Consultation
+						</h2>
+
+						<p class="mg-contact-desc">
+							Explore premium granite, quartz, and imported marble collections.
+							Our specialists guide you in selecting the perfect surface
+							for kitchens, flooring, elevations and custom interiors.
+						</p>
+					</div>
+
+					<!-- RIGHT FORM -->
+					<div class="mg-contact-right">
+
+						<form class="mg-contact-form">
+
+							<div class="mg-input-wrap">
+								<input type="text" required>
+								<label>Full Name</label>
+							</div>
+
+							<div class="mg-input-wrap">
+								<input type="tel" required>
+								<label>Phone Number</label>
+							</div>
+
+							<div class="mg-input-wrap">
+								<input type="text" required>
+								<label>Project Location</label>
+							</div>
+
+							<div class="mg-input-wrap">
+								<textarea rows="2" required></textarea>
+								<label>Project Details</label>
+							</div>
+
+							<button type="submit" class="mg-contact-btn">
+								Request Consultation
+							</button>
+
+						</form>
+
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+		<!--===Contact us Section End===-->
 
 		<!--===Start Footer Section===-->
 		<div class="int_footer_wrapper">
@@ -440,6 +489,9 @@
 		});
 	</script>
 
+
+	<!-- AOS animations -->
+	<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 	<!--=== Optional JavaScript ===-->
 	<script data-cfasync="false" src="assets/js/email-decode.min.js"></script>
 	<script src="assets/js/jquery.min.js" type="076590b7798973207dfc0b07-text/javascript"></script>
