@@ -820,11 +820,11 @@ Assigned to: Theme Forest
     // datepicker js
 
     /*Nice Select*/
-    niceselect: function () {
-      if ($("select").length > 0) {
+   niceselect: function () {
+    if ($.fn.niceSelect && $("select").length > 0) {
         $("select").niceSelect();
-      }
-    },
+    }
+},
     /*Nice Select*/
 
     /*Mouse_wheel*/

@@ -1030,43 +1030,65 @@
         </div>
         <!-- ENQUIRY MODAL END-->
 
-        <!-- Promotional Modal -->
-        <div class="mg-modal" id="mgPromoModal">
+        <!-- ===== Promotional Modal ===== -->
+		<div class="mg-modal" id="mgPromoModal">
 
-            <button class="mg-close" id="mgPromoClose">&times;</button>
+			<button class="mg-close" id="mgPromoClose">&times;</button>
 
-            <div class="mg-modal-content">
+			<div class="mg-modal-content">
 
-                <h3>Exclusive Granite Collection</h3>
+				<h3>Exclusive Granite Collection</h3>
 
-                <p class="mg-subtext">
-                    Discover premium surfaces crafted for timeless interiors.
-                    Visit Mahaveer Granite Exclusive showroom and get personalized assistance
-                    for your next project.
-                </p>
+				<p class="mg-subtext">
+					Discover premium surfaces crafted for timeless interiors.
+					Visit Mahaveer Granite Exclusive showroom and get personalized assistance
+					for your next project.
+				</p>
 
-                <form class="mg-form">
+				<form class="mg-form">
 
-                    <div class="mg-input-group">
-                        <input type="text" placeholder="Full Name" required>
-                    </div>
+					<!-- Full Name -->
+					<div class="mg-input-group">
+						<input type="text" placeholder="Full Name" required>
+					</div>
 
-                    <div class="mg-input-group">
-                        <input type="tel" placeholder="Phone Number" required>
-                    </div>
+					<!-- Mobile Number -->
+					<div class="mg-input-group">
+						<input type="tel" placeholder="Mobile Number" pattern="[0-9]{10}" maxlength="10" required>
+					</div>
 
-                    <div class="mg-input-group">
-                        <input type="text" placeholder="Address" required>
-                    </div>
+					<!-- Product Dropdown -->
+					<div class="mg-input-group">
+						<select required>
+							<option value="" hidden selected>What are you looking for?</option>
+							<option value="Tiles">Tiles</option>
+							<option value="Granite">Granite</option>
+							<option value="Quartz">Quartz</option>
+							<option value="Sanitaryware">Sanitaryware</option>
+							<option value="Not Sure">Not Sure</option>
+						</select>
+					</div>
 
-                    <button type="submit" class="mg-submit-btn">
-                        Get Special Offer
-                    </button>
+					<!-- Timeline Dropdown -->
+					<div class="mg-input-group">
+						<select required>
+							<option value="" hidden selected>Project Timeline</option>
+							<option value="Immediate">Immediate</option>
+							<option value="1-2 Months">1–2 Months</option>
+							<option value="2-3 Months">2–3 Months</option>
+							<option value="Planning Stage">Planning Stage</option>
+						</select>
+					</div>
 
-                </form>
+					<button type="submit" class="mg-submit-btn">
+						Get Special Offer
+					</button>
 
-            </div>
-        </div>
+				</form>
+
+			</div>
+		</div>
+
 
     </div>
     <!--=== End Main wraapper ===-->

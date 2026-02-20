@@ -82,19 +82,7 @@
 								</div>
 								<div class="int_cartsec">
 									<ul>
-										<!-- <li><a href="javascript:;" class="open_search_bar">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.239 30.239">
-													<g>
-														<g>
-															<path
-																d="M20.194,3.46c-4.613-4.613-12.121-4.613-16.734,0c-4.612,4.614-4.612,12.121,0,16.735   c4.108,4.107,10.506,4.547,15.116,1.34c0.097,0.459,0.319,0.897,0.676,1.254l6.718,6.718c0.979,0.977,2.561,0.977,3.535,0   c0.978-0.978,0.978-2.56,0-3.535l-6.718-6.72c-0.355-0.354-0.794-0.577-1.253-0.674C24.743,13.967,24.303,7.57,20.194,3.46z    M18.073,18.074c-3.444,3.444-9.049,3.444-12.492,0c-3.442-3.444-3.442-9.048,0-12.492c3.443-3.443,9.048-3.443,12.492,0   C21.517,9.026,21.517,14.63,18.073,18.074z"
-																data-original="#000000" class="active-path"
-																data-old_color="#000000" fill="var(--btn-primary)" />
-														</g>
-													</g>
-												</svg>
-											</a>
-										</li> -->
+
 										<li>
 											<a href="wishlist.html" class="cart_round box_add">
 												<svg xmlns="http://www.w3.org/2000/svg" width="17px" height="16px"
@@ -106,18 +94,18 @@
 											</a>
 
 										</li>
-										<li class="int_profile_carol">
+										<!-- <li class="int_profile_carol">
 											<a href="javascript:;" class="setting_toggle"><img
 													src="assets/images/header_setting_img.jpg" alt="image"
 													class="img-fluid" />Amelia Carol <i
 													class="fas fa-caret-down toggle_caret"></i></a>
-										</li>
-										<li class="int_login_sign">
+										</li> -->
+										<!-- <li class="int_login_sign">
 											<a href="#" class="int_login_model"><i class="fas fa-sign-in-alt"></i> login
 												<p>/</p>
 											</a>
 											<a href="#" class="int_signup_model">register</a>
-										</li>
+										</li> -->
 									</ul>
 								</div>
 								<div class="int_toggle">
@@ -132,7 +120,7 @@
 			</div>
 
 			<!--sign-in Modal-->
-			<div class="int_modal_form int_modal_login">
+			<!-- <div class="int_modal_form int_modal_login">
 				<div class="int_signin_flex">
 					<div class="container">
 						<div class="row">
@@ -157,7 +145,6 @@
 											</div>
 										</div>
 									</div>
-									<!-- Add Pagination -->
 									<div class="swiper-pagination"></div>
 								</div>
 							</div>
@@ -191,10 +178,10 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<!--sign-in form-->
 			<!--sign-up Modal-->
-			<div class="int_modal_form int_modal_signup">
+			<!-- <div class="int_modal_form int_modal_signup">
 				<div class="int_signin_flex">
 					<div class="container">
 						<div class="row">
@@ -221,7 +208,6 @@
 											</div>
 										</div>
 									</div>
-									<!-- Add Pagination -->
 									<div class="swiper-pagination"></div>
 								</div>
 							</div>
@@ -230,11 +216,6 @@
 									<button type="button" class="close_login">&times;</button>
 									<a href="index.html"><img src="assets/images/logo_mg.png" class="logo-form"
 											alt="logo" /></a>
-									<!-- <p>
-										Create your account to explore collections, save selections, and manage your
-										enquiries.
-									</p> -->
-
 									<h3>Sign up</h3>
 									<div class="form_block">
 										<input type="text" class="form_field" placeholder="Name">
@@ -264,15 +245,7 @@
 										</div>
 									</div>
 
-
 									<div class="form_options">
-
-										<!-- <label class="custom_check">
-											<input type="checkbox">
-											<span class="checkmark"></span>
-											Receive updates and promotional offers
-										</label> -->
-
 										<label class="custom_check">
 											<input type="checkbox" required>
 											<span class="checkmark"></span>
@@ -294,7 +267,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<!--sign-up form-->
 
 		</div>
@@ -438,7 +411,6 @@
 			</div>
 		</div>
 		<!--===End Index4 Banner ===-->
-
 
 		<!--===Start Service Section===-->
 		<div class="int_service_wrapper">
@@ -1464,7 +1436,7 @@
 		</div>
 		<!--===Start Bottom Footer Section===-->
 
-		<!-- Promotional Modal -->
+		<!-- ===== Promotional Modal ===== -->
 		<div class="mg-modal" id="mgPromoModal">
 
 			<button class="mg-close" id="mgPromoClose">&times;</button>
@@ -1481,16 +1453,37 @@
 
 				<form class="mg-form">
 
+					<!-- Full Name -->
 					<div class="mg-input-group">
 						<input type="text" placeholder="Full Name" required>
 					</div>
 
+					<!-- Mobile Number -->
 					<div class="mg-input-group">
-						<input type="tel" placeholder="Phone Number" required>
+						<input type="tel" placeholder="Mobile Number" pattern="[0-9]{10}" maxlength="10" required>
 					</div>
 
+					<!-- Product Dropdown -->
 					<div class="mg-input-group">
-						<input type="text" placeholder="Address" required>
+						<select required>
+							<option value="" hidden selected>What are you looking for?</option>
+							<option value="Tiles">Tiles</option>
+							<option value="Granite">Granite</option>
+							<option value="Quartz">Quartz</option>
+							<option value="Sanitaryware">Sanitaryware</option>
+							<option value="Not Sure">Not Sure</option>
+						</select>
+					</div>
+
+					<!-- Timeline Dropdown -->
+					<div class="mg-input-group">
+						<select required>
+							<option value="" hidden selected>Project Timeline</option>
+							<option value="Immediate">Immediate</option>
+							<option value="1-2 Months">1–2 Months</option>
+							<option value="2-3 Months">2–3 Months</option>
+							<option value="Planning Stage">Planning Stage</option>
+						</select>
 					</div>
 
 					<button type="submit" class="mg-submit-btn">
@@ -1515,15 +1508,47 @@
 
 			const modal = document.getElementById("mgPromoModal");
 			const closeBtn = document.getElementById("mgPromoClose");
+			const form = modal.querySelector("form");
 
-			if (!modal || !closeBtn) return;
+			if (!modal || !closeBtn || !form) return;
 
-			setTimeout(function () {
+			const MODAL_KEY = "mgPromoSubmitted";
+			const CLOSE_KEY = "mgPromoClosed";
+
+			function openModal() {
+				if (sessionStorage.getItem(MODAL_KEY)) return;
 				modal.classList.add("active");
-			}, 3000); // change to 30000 later
+			}
 
-			closeBtn.addEventListener("click", function () {
+			function closeModal() {
 				modal.classList.remove("active");
+				sessionStorage.setItem(CLOSE_KEY, "true");
+
+				// reopen after 1 minute if not submitted
+				setTimeout(() => {
+					if (!sessionStorage.getItem(MODAL_KEY)) {
+						modal.classList.add("active");
+					}
+				}, 60000); // 1 minute
+			}
+
+			// Initial 30 sec trigger
+			setTimeout(() => {
+				if (!sessionStorage.getItem(MODAL_KEY)) {
+					openModal();
+				}
+			}, 30000);
+
+			closeBtn.addEventListener("click", closeModal);
+
+			form.addEventListener("submit", function (e) {
+				e.preventDefault();
+
+				sessionStorage.setItem(MODAL_KEY, "true");
+				modal.classList.remove("active");
+
+				// Here you can add AJAX later
+				console.log("Form submitted");
 			});
 
 		});
@@ -1542,6 +1567,7 @@
 	<script src="assets/js/jquery.magnific-popup.min.js" type="dcdfd392b6fd69346b465f57-text/javascript"></script>
 	<script src="assets/js/plugin/countto/jquery.appear.js" type="dcdfd392b6fd69346b465f57-text/javascript"></script>
 	<script src="assets/js/plugin/countto/jquery.countTo.js" type="dcdfd392b6fd69346b465f57-text/javascript"></script>
+	<!-- <script src="assets/js/nice-select.min.js" type="dcdfd392b6fd69346b465f57-text/javascript"></script> -->
 	<script src="assets/js/custom.js" type="dcdfd392b6fd69346b465f57-text/javascript"></script>
 	<!-- Swiper JS -->
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
